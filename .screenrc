@@ -1,0 +1,6 @@
+vbell off
+startup_message off
+screen bash
+screen bash
+screen bash
+hardstatus alwayslastline "%{w}%?%-Lw%?%{g}(%{G}%n*%f%t%?(%u)%?%{g})%{w}%?%+Lw%?%?%=%{w}%{c}[%{c}%H%{c}]"
