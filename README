@@ -1,2 +1,12 @@
 Various config files I use across various platforms Please follow http://dj-dexter.linuxerz.cl 
 for more information.
+
+1 wifisurvival script, for persistance and not drops a wifi connection
+
+1.1 put in /usr/bin/ chmod +x /usr/bin/wifisurvival, run with root
+
+1.2 bassed values in this: http://kmkeen.com/linux-wifi/  
+
+2 screenfetch-dev edited script, for says more rares Window Managers, the original
+
+  says Not Found

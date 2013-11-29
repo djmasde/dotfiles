@@ -1,0 +1,8 @@
+#!/bin/sh
+echo "poniendo valores wifi optimos pa no caerse...."
+#wtf power in wlan0 = kernel panics =_=
+iwconfig wlan0 power off &
+iwconfig wlan0 retry 30 &
+iwconfig wlan0 rts 512 &
+iwconfig wlan0 frag 256 &
+echo "terminado :3"
