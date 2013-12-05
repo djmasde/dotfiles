@@ -46,10 +46,10 @@ bind C-w exec /usr/local/share/ratpoison/allwindows.sh
 # Stuff
 
 # Applications
-bind f exec firefox
-bind C-f exec firefox
-bind e exec chromium
-bind C-e exec chromium
+bind f exec qupzilla
+bind C-f exec qupzilla
+bind e exec firefox
+bind C-e exec firefox
 bind c exec urxvt
 bind C-c exec urxvt
 #set font "-ypn-envypnd-medium-r-normal--13-130-75-75-c-90-iso8859-1"
@@ -114,11 +114,12 @@ definekey top s-Right nextscreen
 
 
 # Workspaces
-exec rpws init 4 -a
+exec rpws init 5 -a
 definekey top C-M-1 rpws1
 definekey top C-M-2 rpws2
 definekey top C-M-3 rpws3
 definekey top C-M-4 rpws4
+definekey top C-M-5 rpws5
 definekey top C-M-Left rpwsp
 definekey top C-M-Right rpwsn
 
@@ -129,9 +130,10 @@ exec killall xfce4-notifyd
 #exec dunst
 #exec conky -c $HOME/.conkyrc-rat |dzen2 -h 20 -ta l -e -p
 #exec conky -c  $HOME/.conkyrc-console |dzen2 -ta left -fg '#ddccbb' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*'
-exec xmobar -F '#ddccbb' -f '-*-terminus-*-r-normal-*-*-120-*-*-*-*-utf-8-*'
+#exec xmobar -F '#ddccbb' -f '-*-terminus-*-r-normal-*-*-120-*-*-*-*-utf-8-*'
+exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2
 #xcompmgr is kawaii :)
-exec xcompmgr -c
+exec compton -c -m 0.75 -b
 #Hides the rat a few seconds is is idle.
-exec unclutter
+#exec unclutter
 # tmpwm stumpwm
