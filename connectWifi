@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Revisited and fixed by Dj_Dexter 2013-09-24
+# re tested in slackware 14.0 and runs fine :)
+# only works for wep encripted connections
+
+# die with honor
+function usage() {
+	echo "usage: ./connectWifi \"<essid>\" [key]"
+	echo "       *key in ascii prefaces s:[key]"
+	echo "Channel number of channel"
+        echo "Example connectWifi "essid" s:key 3"
+	exit 1
+}
+
+# killed in disgrace
+function die() {
+	echo
+	echo "   [*] ERROR: $1..."
+	echo
+	exit 1
+}
+
+# check for essid
+if [[ $1 ]]; then
+	# setup
+        pkill dhclient
+	echo "Starting..."
+	ifconfig wlan0 down
+	dhclient -r wlan0 -q
+        #pkill dhclient
+	echo " -Previous connection dropped."
+	iwconfig wlan0 essid "$1"
+	echo " -ESSID Set to $1."
+	# check for key
+	if [[ $2 ]]; then
+		iwconfig wlan0 key $2
+		echo " -Key set to $2."
+	fi
+	# connect
+        iwconfig wlan0 channel "$3"
+        ifconfig wlan0 up
+        iwconfig wlan0 mode Managed
+	echo " -Connecting..."
+	echo
+	dhclient wlan0
+	# announce success
+	if [[ $? -eq 0 ]]; then
+		echo
+		echo "Successfully connected to $1!"
+		echo
+		exit 0
+	fi
+
+else
+	# no variables
+	usage
+fi
+
+# declare failure
+die "Failed to connect to $1."
