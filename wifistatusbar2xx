@@ -16,6 +16,7 @@ do
         AP="`/sbin/iwgetid --raw --ap | cut -c1-8`"
         SENAL="`/sbin/iwconfig 2> /dev/null | sed -n "/${tarjeta}/{n;n;n;n;n;p;}" | awk -F'=' '{printf $NF}' | sed 's/\s//g'`"
         BITR="`/sbin/iwconfig 2> /dev/null | sed -n "/${tarjeta}/{n;n;p;}" | sed -E 's/^[^=]+=([.0-9]+)\s.*/\1Mb\/s/'`"
-	echo "[ESSID:$essid $SENAL $AP $BITR ] {$fecha} $(id -un)@$(hostname)"
+        SONG="`/usr/bin/ncmpcpp --now-playing 2> /dev/null`"
+	echo "[ESSID:$essid $SENAL $AP $BITR ] {$fecha} $(id -un)@$(hostname) {$SONG}"
 	sleep 5s
 done
