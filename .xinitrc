@@ -19,7 +19,7 @@ setxkbmap es &
 #conky -c /home/dexter4/.conkyrc-console | while read -r; do xsetroot -name "$REPLY"; done &
 #perl /home/dexter4/wifisignal.pl &
 #bash /home/dexter4/wifistatusbar2xx wlan0 &
-bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 &
+#bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 &
 #sh $HOME/.console_conky
 #exec /usr/local/bin/dwm
 #exec ctwm
@@ -33,7 +33,8 @@ compton -c -m 0.75 -b &
 #exec tvtwm
 #exec vtwm
 #exec twm
-exec x9wm -nostalgia -virtuals 14
+#exec x9wm -nostalgia -virtuals 14
 #exec lwm
 #exec ctwm
 #exec /usr/local/bin/wmaker
+exec /usr/local/bin/ratpoison
