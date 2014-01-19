@@ -1,0 +1,65 @@
+#!/bin/bash
+# Bash script for upload files to uploadpie.com
+# Licensed under a BSD License
+# By who @#$% cares?!
+# Edited by k133
+
+MAX_FILE_SIZE=3145728
+DURATION=1
+EXPIRE="30 Minutos"
+USER_AGENT="Mozilla/5.0 (X11; Linux x86_64; rv:26.0) Gecko/20100101 Firefox/26.0"
+SCRIPT_NAME=$(basename "$0")
+
+if [[ "$#" -lt 1 || "$1" == "-h" ]];then
+  echo "Uso: ./"$SCRIPT_NAME" <FILE> <DURACION>"
+  echo -e "Donde DURACION es un número del 1 al 5 (1 por defecto):\n
+    1 = 30 minutos
+    2 = 1 Hora
+    3 = 6 Horas
+    4 = 1 Día
+    5 = 1 Semana"
+  echo "Las extensiones soportadas son: png, jpg, gif, pdf y txt.
+" && exit 1
+
+elif [[ ! -f $1 ]];then
+  echo "El archivo \"$(basename "$1")\" no es un archivo regular.
+" && exit 1
+
+else
+  if [[ "$#" -gt 1 && "$2" =~ ^-?[0-9]+$ ]];then
+    case $2 in
+      2) DURATION=2      # Duracion del archivo = 1 hora
+         EXPIRE="1 Hora"
+         ;;
+      3) DURATION=3      # Duracion del archivo = 6 horas
+         EXPIRE="6 Horas"
+         ;;
+      4) DURATION=4      # Duracion del archivo = 1 dia
+         EXPIRE="1 Día"
+         ;;
+      5) DURATION=5      # Duracion del archivo = 1 semana
+         EXPIRE="1 Semana"
+         ;;
+      *) # No hago nada, pues DURACION=1 por defecto, dejo esto solo por convencion
+         ;;
+    esac
+  fi
+
+  FILE="$1"
+  SIZE=$(du --bytes "${FILE}" | awk '{print $1}')
+
+  echo -e "\e[1;33mFile:\e[0m $(basename "$FILE")
+\e[1;33mSize:\e[0m $(du --human-readable "${FILE}" | awk '{print $1}')
+\e[1;33mExpiration:\e[0m $EXPIRE\n"
+
+  if [ "$SIZE" -gt "$MAX_FILE_SIZE" ];then
+    echo "El archivo es demasiado grande, uploadpie.com permite un maximo de 3 mb.
+" && exit 1
+  else
+    curl --progress-bar -A "$USER_AGENT" --form uploadedfile=@"$FILE" --form upload=1 --form MAX_FILE_SIZE="$MAX_FILE_SIZE"  --form expire="$DURATION" http://uploadpie.com | grep 'id="uploaded"' | cut -d'"' -f6
+  fi
+fi
+echo
+
+exit 0
+
