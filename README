@@ -9,4 +9,11 @@ for more information.
 
 2 screenfetch-dev edited script, for says more rares Window Managers, the original says Not Found
 
+3 Added wifi script for wep connections
 
+4 Custom dhclient.conf for essids with troll dhcp renew, ex: 60 seconds
+
+4.1 copy to /etc/dhclient.conf
+
+4.2 chattr +i /etc/dhclient.conf (if dhclient overwrites it)
+4.3 Enjoy the custom renew and essid :fufufu, you :problem?
