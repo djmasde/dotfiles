@@ -17,3 +17,12 @@ for more information.
 
 4.2 chattr +i /etc/dhclient.conf (if dhclient overwrites it)
 4.3 Enjoy the custom renew and essid :fufufu, you :problem?
+
+5 .Xdefaults now requires tewi fonts: https://github.com/neeee/tewi-font
+
+5.1 git clone https://github.com/neeee/tewi-font.git
+5.2 if don't existe .fonts directory in your home directory
+5.3 mkdir .fonts
+5.4 cp tewi-font/*.bdf ~/.fonts
+5.5 fc-cachw -fv >> wait a moment
+5.6 Enjoy the font with more Inaba Tewi's

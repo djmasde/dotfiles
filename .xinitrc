@@ -27,7 +27,7 @@ setxkbmap es &
 #exec smallwm
 #exec twm
 #xcompmgr not render shadows
-compton -c -m 0.75 -b &
+#compton -c -m 0.75 -b &
 #exec /usr/local/bin/karmen
 #exec /usr/local/bin/novawm
 #exec tvtwm
@@ -37,4 +37,9 @@ compton -c -m 0.75 -b &
 #exec lwm
 #exec ctwm
 #exec /usr/local/bin/wmaker
-exec /usr/local/bin/ratpoison
+#exec /usr/local/bin/ratpoison
+#exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
+#exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-lucida-*-*-*-sans-10-*-*-*-*-*-*-*' &
+exec bash /home/dexter4/wifistatusbar2xx wlan0 | dzen2 -ta right -fg '#c3c2c5' -fn '-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*'
+exec 9wm -nostalgia
+#/usr/local/bin/compiz --indirect-rendering --keep-desktop-hints --loose-binding --sm-disable gconf

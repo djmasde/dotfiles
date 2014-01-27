@@ -3,16 +3,11 @@ Xft.antialias: true
 Xft.hinting: full
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
- 
-c64*font: xft:Adore64:autohint=false:antialias=false:size=7
-c64*background: #3a319c
-c64*foreground: #7b71d6
- 
 xterm*title: xterm
 !xterm*faceName: terminus:pixelsize=10
-xterm*fontname: -*-terminus-medium-r-*-*-*-*-*-*-*-*-*-*
-!xterm*geometry: 90x25
-!xterm.vt100.geometry: 90x25
+!xterm*fontname: -*-terminus-medium-r-*-*-*-*-*-*-*-*-*-*
+xterm*geometry: 90x25
+xterm.vt100.geometry: 90x25
 xterm*boldMode: false
 xterm*cutNewline: false
 xterm*on4Clicks: group
@@ -71,23 +66,75 @@ XTerm*color14: #7777aa
 !white
 XTerm*color7:  #665c64
 XTerm*color15: #c3c2c5
- 
 
+! Xorg cursor
+Xcursor*theme            : Neutral_Plus
 
-!!URxvt*font: -*-terminus-medium-r-*-*-*-*-*-*-*-*-*-*
-!URxvt*boldFont: -*-terminus-medium-r-*-*-*-*-*-*-*-*-*-*
-urxvt.termName: xterm-256color
-urxvt.scrollBar: false
-urxvt.imLocale: ja_JP.UTF-8
-urxvt.loginShell: true
-urxvt.saveLines: 512
+! Misc settings
+URxvt*cursorBlink        : false
+URxvt*cursorUnderline    : true
+URxvt*pointerBlank       : true
+URxvt*intensityStyles    : true
+URxvt*jumpScroll         : true
+URxvt*saveLines          : 4096
+URxvt*scrollBar          : false
+URxvt*skipBuiltinGlyphs  : false
+URxvt*skipScroll         : true
+URxvt*urgentOnBell       : true
+URxvt*visualBell         : true
+URxvt*internalBorder     : 2
+
+! Extensions
+URxvt*perl-ext-common    : default,matcher
+URxvt*matcher*button     : 1
+URxvt*url-launcher       : firefox
+
+! Fonts
+!#define fonts \
+!	xft:Tewi:pixelsize=10,      \
+!	xft:MS Gothic:pixelsize=12, \
+!	xft:LastResort:size=5
+URxvt*font: xft:Tewi:pixelsize=11
+URxvt*boldFont: xft:Tewi:pixelsize=11
 urxvt.geometry: 90x25
-urxvt.boldMode: false
-urxvt.inheritPixmap: false
-urxvt.xftAntialias: false
-urxvt*font: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
-urxvt*boldFont: -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
-!URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=14
+! Format:
+!  ! Colour
+!  <dark>
+!  <light>
+
+! Default
+!URxvt*foreground: #cbc6cc
+!URxvt*background: #19171a
+! Black
+!URxvt*color0:     #242224
+!URxvt*color8:     #4c4b4d
+! White
+!URxvt*color7:     #b8b2b9
+!URxvt*color15:    #ece8ed
+! Red
+!URxvt*color1:     #995876
+!URxvt*color9:     #f895c4
+! Green
+!URxvt*color2:     #748c71
+!URxvt*color10:    #b3d6ae
+! Yellow
+!URxvt*color3:     #9c8f6a
+!URxvt*color11:    #f4e1ab
+! Blue
+!URxvt*color4:     #7086a8
+!URxvt*color12:    #bcd8ff
+! Magenta
+!URxvt*color5:     #97729c
+!URxvt*color13:    #dfbaf5
+! Cyan
+!URxvt*color6:     #698c8c
+!URxvt*color14:    #aae3db
+
+! Etc
+!URxvt*color16:    #363436
+!URxvt*color234:   #1c1a1c
+
+
 urxvt.jumpScroll: true
 urxvt.tintColor: white
 URxvt*internalBorder: 3
@@ -342,8 +389,9 @@ dclock*background: #1c1c1c
 dclock*foreground: #00587c
 dclock*geometry:   175x70
 dclock*seconds:    no
-dclock*miltime:    yes
-dclock*font:   -*-motoko-*-*-*-*-*-*-*-*-*-*-*-*
+dclock*miltime:    no
+!dclock*font: xft:Tewi:pixelsize=11
+!dclock*font:   -*-motoko-*-*-*-*-*-*-*-*-*-*-*-*
 !dclock*font: -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
 
 !Mwm*background: blue
