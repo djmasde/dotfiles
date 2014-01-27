@@ -21,7 +21,7 @@ for more information.
 5 .Xdefaults now requires tewi fonts: https://github.com/neeee/tewi-font
 
 5.1 git clone https://github.com/neeee/tewi-font.git
-5.2 if don't existe .fonts directory in your home directory
+5.2 if don't exists .fonts directory in your home directory
 5.3 mkdir .fonts
 5.4 cp tewi-font/*.bdf ~/.fonts
 5.5 fc-cache -fv >> wait a moment
