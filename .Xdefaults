@@ -5,6 +5,7 @@ Xft.hintstyle: hintslight
 Xft.rgba: rgb
 xterm*title: xterm
 !xterm*faceName: terminus:pixelsize=10
+xterm*faceName: xft:Tewi:pixelsize=11
 !xterm*fontname: -*-terminus-medium-r-*-*-*-*-*-*-*-*-*-*
 xterm*geometry: 90x25
 xterm.vt100.geometry: 90x25
