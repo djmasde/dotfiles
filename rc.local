@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# /etc/rc.d/rc.local:  Local system initialization script.
+#
+# Put any local startup commands in here.  Also, if you have
+# anything that needs to be run at shutdown time you can
+# make an /etc/rc.d/rc.local_shutdown script and put those
+# commands in there.
+
+#For access to low memory mmap
+echo 0 > /proc/sys/vm/mmap_min_addr
+#For wavemon
+setcap cap_net_admin=eip /usr/bin/wavemon
+#keep alive
+echo 60 > /proc/sys/net/ipv4/tcp_keepalive_time
+#show dmesg in normal user
+echo 0 > /proc/sys/kernel/dmesg_restrict
+#faking MAC
+/sbin/ifconfig wlan0 down
+/sbin/ifconfig wlan0 down
+/sbin/ifconfig wlan0 hw ether (mac fake)
+/sbin/ifconfig wlan0 up
+#anti smurf y tambien portales de xuxa de vomistar
+echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+echo "0" > /proc/sys/net/ipv4/conf/all/accept_redirects
+echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
+#bit rate fijo?
+#/sbin/iwconfig wlan0 rate 24M
