@@ -4,7 +4,7 @@ echo "poniendo valores wifi optimos pa no caerse...."
 iwconfig wlan0 power off &
 iwconfig wlan0 retry 30 &
 echo "Activando modo attentionwhere hacia la ap..."
-iwconfig wlan0 rts 1
+iwconfig wlan0 rts 1 &
 #iwconfig wlan0 rts 512 &
 iwconfig wlan0 frag 256 &
 echo "terminado :3"
