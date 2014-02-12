@@ -66,10 +66,10 @@
 #  Control + b:2 + Release
 "gmrun"
 Alt+F1
-#   "xlock -nice 0 -mode blank &"
-#   Alt+F10
-"xterm -T WICD -e sudo wicd-curses"
+"xlock -nice 0 -mode blank"
 Alt+F10
+#"xterm -T WICD -e sudo wicd-curses"
+#Alt+F10
 "transset --min 0.1 -p --dec 0.2"
 control+shift +f
 "transset -p --dec 0.1 -m 1"
