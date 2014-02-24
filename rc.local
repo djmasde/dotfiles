@@ -15,14 +15,37 @@ setcap cap_net_admin=eip /usr/bin/wavemon
 echo 60 > /proc/sys/net/ipv4/tcp_keepalive_time
 #show dmesg in normal user
 echo 0 > /proc/sys/kernel/dmesg_restrict
+#cache pressure
+echo "50" >> /proc/sys/vm/vfs_cache_pressure
+#swap
+echo "2" >> /proc/sys/vm/swappiness
+#zram o_O
+modprobe zram 
+echo $((400*1024*1024)) > /sys/block/zram0/disksize
+mkswap /dev/zram0
+swapon -p 50 /dev/zram0
 #faking MAC
 /sbin/ifconfig wlan0 down
 /sbin/ifconfig wlan0 down
-/sbin/ifconfig wlan0 hw ether (mac fake)
+/sbin/ifconfig wlan0 hw ether mac fake
 /sbin/ifconfig wlan0 up
 #anti smurf y tambien portales de xuxa de vomistar
+#Ignore broadcasts
 echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+#Ignore internal icmp pings (indetectability?)
+echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_all
+#Ignore redirects
 echo "0" > /proc/sys/net/ipv4/conf/all/accept_redirects
+#Ignore bogus error messages
 echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
+#No TCP timestaps
+echo "0" >> /proc/sys/net/ipv4/tcp_timestamps
+#Rp filter
+echo "1" >> /proc/sys/net/ipv4/conf/all/rp_filter
+echo "1" >> /proc/sys/net/ipv4/conf/default/rp_filter
+#Anti Syn Attack
+echo "1" >> /proc/sys/net/ipv4/tcp_syncookies
+#Log martian packets
+echo 1 > /proc/sys/net/ipv4/conf/all/log_martians
 #bit rate fijo?
-#/sbin/iwconfig wlan0 rate 24M
+#/sbin/iwconfig wlan0 rate 54M
