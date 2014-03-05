@@ -6,10 +6,10 @@ for more information.
 1.1 put in /usr/bin/ chmod +x /usr/bin/wifisurvival, run with root
 
 1.2 bassed values in this: http://kmkeen.com/linux-wifi/  
-
+1.3 if have ralink bassed wifi cards the power management is necessary to ajust the txpower
 2 screenfetch-dev edited script, for says more rares Window Managers, the original says Not Found
 
-3 Added wifi script for wep connections
+3 Added wifi script for wep connections, now: capable to connect to interface wlan1 or another if have
 
 4 Custom dhclient.conf for essids with troll dhcp renew, ex: 60 seconds
 
