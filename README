@@ -4,9 +4,9 @@ for more information.
 1 wifisurvival script, for persistance and not drops a wifi connection
 
 1.1 put in /usr/bin/ chmod +x /usr/bin/wifisurvival, run with root
-
 1.2 bassed values in this: http://kmkeen.com/linux-wifi/  
 1.3 if have ralink bassed wifi cards the power management is necessary to ajust the txpower
+
 2 screenfetch-dev edited script, for says more rares Window Managers, the original says Not Found
 
 3 Added wifi script for wep connections, now: capable to connect to interface wlan1 or another if have
@@ -14,7 +14,6 @@ for more information.
 4 Custom dhclient.conf for essids with troll dhcp renew, ex: 60 seconds
 
 4.1 copy to /etc/dhclient.conf
-
 4.2 chattr +i /etc/dhclient.conf (if dhclient overwrites it)
 4.3 Enjoy the custom renew and essid :fufufu, you :problem?
 
