@@ -25,3 +25,21 @@ for more information.
 5.4 cp tewi-font/*.bdf ~/.fonts
 5.5 fc-cache -fv >> wait a moment
 5.6 Enjoy the font with more Inaba Tewi's
+
+6 Added sample files for use in OpenBSD
+
+7 Wireless in OpenBSD (in my case run0 for run driver :))
+
+7.1 Scan for wireless networks:
+ifconfig run0 scan >> wait 15 at 30 seconds, appears more neightboors networks, and your ap
+7.2 for open networks:
+echo "dhcp nwid someap chan 2" >> /etc/hostname.run0
+sh /etc/netstart
+7.3 for wep networks (for hexadecimal 0x + passrase):
+echo "dhcp nwid someap chan 2 nwkey ascii" >> /etc/hostname.run0
+sh /etc/netstart
+7.4 for wpa/wpa2 networks:
+echo "dhcp nwid someap chan2 wpakey passrase" >> /etc/hostname.run0
+sh /etc/netstart
+
+athn driver runs bad in ar9071 bassed wireless usb cards (in BSS mode)
