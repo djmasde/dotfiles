@@ -1,16 +1,9 @@
-#!/bin/bash
-# Interfaz valida para wifi wlanX, muestra Essid, Interfaz (Cona la que estes conectado), AP, IP (externa), Calidad de señal (xx/70).
-  ESTADO="`/sbin/iwgetid`"
-  if [ "$ESTADO" != "" ]; then
-	ESSID="`/sbin/iwgetid --raw`"
-	INTERFAZ="`/sbin/iwgetid | awk '{print $1}'`"
-    SENAL="`/sbin/iwconfig 2> /dev/null | sed -n "/${INTERFAZ}/{n;n;n;n;n;p;}" | awk -F'=' '{printf $NF}' | sed 's/\s//g'`"
-#    MI_MAC="`/sbin/ifconfig | grep $INTERFAZ | awk '{print $5}' | cut -c1-8`"
-	AP="`/sbin/iwgetid --raw --ap | cut -c1-8`"
-    BITR="`/sbin/iwconfig 2> /dev/null | sed -n "/${INTERFAZ}/{n;n;p;}" | sed -E 's/^[^=]+=([.0-9]+)\s.*/\1Mb\/s/'`"
-#    IP_EXT="`cat ~/scripts/data_xsetroot | sed -n '4p'`"
-#    HOSTS="`cat ~/scripts/data_xsetroot | sed -n '2p'`"
-    echo "$ESSID $AP $SENAL $BITR $INTERFAZ"
-  else
-    echo "Sin conexion"
-  fi
+out_to_console yes
+out_to_x no
+background no
+update_interval 2
+total_run_times 0
+use_spacer none
+
+TEXT
+:: ${cpu cpu}% ${loadavg 1 2 3} :: ${execi 150 sysctl |grep hw.sensors.lmtemp0 |head -n1 | sed 's/^.*\=//'}c :: $memperc% ($mem) :: wifi: ${downspeed run0} K/s :: ${upspeed run0} K/s :: ${time %a %b %d %I:%M%P}
