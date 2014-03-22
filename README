@@ -28,7 +28,7 @@ for more information.
 
 6 Added sample files for use in OpenBSD
 
-7 Wireless in OpenBSD (in my case run0 for run driver :))
+7 Wireless in OpenBSD (in my case run0 for the run driver :))
 
 7.1 Scan for wireless networks:
 ifconfig run0 scan >> wait 15 at 30 seconds, appears more neightboors networks, and your ap
