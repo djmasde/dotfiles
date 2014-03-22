@@ -41,5 +41,7 @@ sh /etc/netstart
 7.4 for wpa/wpa2 networks:
 echo "dhcp nwid someap chan2 wpakey passrase" >> /etc/hostname.run0
 sh /etc/netstart
+7.5 if you have more networks profiles, edit your /etc/hostname.if for use one at time, no more, or not runs...
+7.6 These examples runs with ifconfig and dhclient
 
 athn driver runs bad in ar9071 bassed wireless usb cards (in BSS mode)
