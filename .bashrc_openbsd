@@ -1,0 +1,11 @@
+alias vpsx="ssh -p 1337 darkx@irc.resecurity.net"
+alias vpsxtunel="ssh -p 1337 -C2qTnN -D 9090 darkx@irc.resecurity.net"
+function 4chandl () 
+{ 
+wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/src/ -P . "$1" 
+}
+
+function borradirnum ()
+{
+rm -rf [0-9]*
+}
