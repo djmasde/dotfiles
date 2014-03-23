@@ -1,0 +1,16 @@
+alias vpsx="ssh -p port user@somehost"
+alias vpsxtunel="ssh -p port -C2qTnN -D 9090 user@somehost"
+function 4chandl () 
+{ 
+wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/src/ -P . "$1" 
+}
+
+function borradirnum ()
+{
+rm -rf [0-9]*
+}
+
+function flacmp3 ()
+{
+for file in *.flac; do flac -cd "$file" | lame -h - "${file%.flac}.mp3"; done
+}
