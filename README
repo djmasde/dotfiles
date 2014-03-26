@@ -46,9 +46,9 @@ sh /etc/netstart
 
 athn driver runs bad in ar9071 bassed wireless usb cards (in BSS mode)
 
-If you follow the OpenBSD -current please read:
+8 If you follow the OpenBSD -current please read:
 
 http://daemonforums.org/showthread.php?t=5893
 http://www.openbsd.org/faq/current.html
 
-Example, finally runs ok a -current snapshot :) >> http://a.pomf.se/czxmzv.png
+8.1 Example, finally runs ok a -current snapshot :) >> http://a.pomf.se/czxmzv.png
