@@ -149,6 +149,7 @@ urxvt.colorIT: #bbbbbb
 urxvt.colorUL: #999999
 urxvt.underlineColor: #999999
 urxvt.borderless: true
+urxvt*termName: rxvt-256color
 
 !Technobass - Foreground/Background
 URxvt*foreground: #665c64
