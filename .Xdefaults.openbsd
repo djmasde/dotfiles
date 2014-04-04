@@ -397,9 +397,38 @@ dclock*miltime:    no
 !dclock*font:   -*-motoko-*-*-*-*-*-*-*-*-*-*-*-*
 !dclock*font: -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
 
+control*Background:		cornsilk4
+control*Foreground:		black
+
+Console*scrollBar:		true
+
+deskset.perfmeter*Background:	thistle4
+deskset.perfmeter.hasTitle:	True
+
+Mwm*XConsole.clientDecoration:	+resizeh
+Mwm*perfmeter.clientDecoration:	+resizeh
+Mwm*control.clientDecoration:	+resizeh
+Mwm*XTerm*clientFunctions:	all
+Mwm*showFeedback:		resize placement move
+Mwm*keyboardFocusPolicy:	pointer
+Mwm*moveOpaque:			true
+Mwm*iconImageMaximum:		48x48
+Mwm*fadeNormalIcon:		true
+Mwm*interactivePlacement:	true
+Mwm*Panner*ClientPinned:	True
+
+Mwm*background:			#305050
+Mwm*activeBackground:		#506070
+Mwm*menu*background:		#9c917a
+Mwm*resizeBorderWidth:		4
+Mwm*frameBorderWidth:		4
+Mwm*activeBackgroundPixmap:	/home/dexter4/wea1.xpm
+Mwm*backgroundPixmap:		/home/dexter4/wea2.xpm
+Mwm*menu*backgroundPixmap:      /home/dexter4/wea2.xpm
+
 !Mwm*background: blue
 !Mwm*foreground: gold
-!Mwm*activeBackground: red
+!Mwm*activeBackground: Gray80
 !Mwm*activeForeground: white
 !Mwm*frameBorderWidth: 4
 !Mwm*resizeBorderWidth: 4
@@ -416,7 +445,7 @@ dclock*miltime:    no
 !Mwm*menu*fontList: -b&h-lucida-medium-r-*-*-12-*-*-*-*-*-*-*
 !Mwm*title*fontList: -b&h-lucida-medium-r-*-*-12-*-*-*-*-*-*-*
 
-! ---| EMACS |--- {{{ 
+! ---| EMACS |--- {{{
 !emacs*font: -jmk-neep alt-medium-r-semicondensed--11-100-75-75-c-50-iso8859-15
 !Emacs*Background: grey15
 !Emacs*Foreground: grey84
