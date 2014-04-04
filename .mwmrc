@@ -1,0 +1,124 @@
+#The WSM is part of the Motif demos package
+#I have the source available at ftp://aic.ml.org/pub/linux/motif-demos.tar.gz
+#
+Menu DefaultRootMenu
+{
+        "Main menu"             f.title
+        "Terms"                 f.menu terms
+        separator               f.separator
+        "Logins"                f.menu logins
+        separator               f.separator
+        "Programs"              f.menu progs
+        separator               f.separator
+        "Backgrounds"           f.menu bg
+        separator               f.separator
+        "Screen Locks"          f.menu lock
+        separator               f.separator
+        "Session"               f.menu sessions
+        separator               f.separator
+        "Refresh"               f.refresh
+        "Pack Icons"            f.pack_icons
+        "Toggle Behavior..."    f.set_behavior
+         no-label               f.separator
+        "Restart..."            f.restart
+        "Quit..."               f.quit_mwm
+}
+
+Menu bg
+{
+        "Backgrounds"           f.title
+#"Stairway"              f.exec "xv -root -quit -max 
+#/home/jrutt/back/stairway.jpg"
+#"Mountains"             f.exec "xv -root -quit -max /home/jrutt/back/mnt.jpg"
+#        "Coil"                  f.exec "xv -root -quit -max 
+#/home/jrutt/back/supercoil.jpg"
+#        "Sphere"                f.exec "xv -root -quit -max 
+#/home/jrutt/back/cool4.jpg"
+#        "Silver Sphere"         f.exec "xv -root -quit -max 
+#/home/jrutt/back/marsurb.jpg"
+        "Nitrogen"               f.exec "nitrogen /home/dexter4/GNUstep/Library/WindowMaker/Backgrounds"
+}
+
+Menu lock
+{
+        "Screen Locks"          f.title
+        "Julia"                 f.exec "xlock -mode julia"
+        "Swarm"                 f.exec "xlock -mode swarm"
+        "pyro"                  f.exec "xlock -mode pyro"
+}
+
+Menu progs
+{
+        "Programs"              f.title
+        "Chrome"                f.exec "chromeA"
+        "File Manager"          f.exec "pcmanfm"
+        "PSI"                   f.exec "psi"
+        "Pidgin "               f.exec "pidgin"
+        "FTP"                   f.exec "gftp"
+        "CD Burn"               f.exec "k3b"
+        "Xmixer"                f.exec "xmix"
+        "Gnome Mixer"           f.exec "gnome-alsamixer"
+        "Leafpad"               f.exec "leafpad"
+        "Acrobat"               f.exec "xpdf"
+        "Xv"                    f.exec "xv"
+        "Gimp"                  f.exec "gimp"
+        "Gpicview"              f.exec "gpicview"
+        "Mpeg Player"           f.exec "xine"
+        "Moc"                   f.exec "xterm -e mocp -T black_theme"
+        "Workspace Manager"     f.exec "wsm"
+        separator               f.separator
+        "xcompmgr"              f.exec "xcompmgr -cCFf  -D3"
+        "kill xcompmgr"         f.exec "killall xcompmgr"
+}
+
+Menu logins
+{
+        "Logins"                f.title
+        "root"                  f.exec "xterm -bg black -fg green -e su -"
+#        "Cobra root"            f.exec "xterm  -ls -bg black -fg green -e rlogin -l root cobra"
+#        "Cobra jrutt"           f.exec "xterm  -ls -bg black -fg white -e rlogin -l jrutt cobra"
+#        "Holly"                 f.exec "xterm  -ls -bg black -fg white -e rlogin -l dpowers holly"
+#        "Icewolf"               f.exec "xterm  -ls -bg black -fg white -e rlogin icewolf"
+#        "Nuthouse"              f.exec "xterm  -ls -bg black -fg white -e rlogin nuthouse"
+}
+Menu terms
+{
+        "Terms"                 f.title
+        "urxvt"                 f.exec "urxvt"
+        "xterm"                 f.exec "xterm"
+#        "xterm"                 f.exec "xterm -ls -bg black -fg white"
+#        "blue xterm"            f.exec "xterm -ls -bg blue -fg white"
+#        "red xterm"             f.exec "xterm -ls -bg red -fg white"
+        "Exec..."               f.exec "gmrun" 
+}
+
+#
+# button binding descriptions
+#
+
+menu sessions
+{
+        "Session"             f.title
+#        "Restart"              f.exec "sudo shutdown -r now"
+#        "Shutdown"             f.exec "sudo shutdown -h now"
+}
+Buttons DefaultButtonBindings
+{
+        <Btn1Down>              frame|icon              f.raise
+        <Btn3Down>              frame|icon              f.lower
+        <Btn1Down>              root                    f.menu  DefaultRootMenu
+        <Btn2Down>              root                    f.menu  progs
+        <Btn3Down>              root                    f.menu  DefaultRootMenu
+        Meta<Btn1Down>          window|icon             f.move
+        Meta<Btn2Down>          window|icon             f.resize
+        Meta Shift<Btn1Down>    window|icon             f.minimize
+        Meta Shift<Btn2Down>    window|icon             f.focus_color
+        Meta Shift<Btn3Down>    window|icon             f.post_wmenu
+        Meta<Btn1Down>          root                    f.track_pan
+        Meta<Btn2Down>          root                    f.track_pan
+	Alt<Btn4up>	        app             	f.exec "transset-df --min 0.1 -p --dec 0.2"
+	Alt<Btn5down>	        app             	f.exec "transset-df -p --inc 0.1"
+
+}
+
+
