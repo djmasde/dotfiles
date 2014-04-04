@@ -405,6 +405,7 @@ Console*scrollBar:		true
 deskset.perfmeter*Background:	thistle4
 deskset.perfmeter.hasTitle:	True
 
+!Older but good Window Manager (MWM) :3
 Mwm*XConsole.clientDecoration:	+resizeh
 Mwm*perfmeter.clientDecoration:	+resizeh
 Mwm*control.clientDecoration:	+resizeh
