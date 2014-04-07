@@ -1,0 +1,264 @@
+#
+# Wizbit's .twmrc file
+# Re-visited and edited by Dj_Dexter, April 2014
+
+VirtualDesktop "130x92-0+0" 20
+
+IconDirectory "/usr/local/include/X11/bitmaps"
+#LeftTitleButton "/home/crocus5/st/uce/pics/bitmap/kill.xbm"	=f.destroy
+#LeftTitleButton "/home/crocus5/st/uce/pics/bitmap/del.xbm"	=f.delete
+ButtonIndent 0
+FramePadding 2
+NoCaseSensitive
+SqueezeTitle
+DontMoveOff
+#InterpolateMenuColors
+RandomPlacement
+NoTitle 
+{
+	"Virtual Desktop"
+        "VTWM Desktop"
+	"VTWM Icon Manager"
+	"xbiff"
+	"xmeter"
+	"myclock"
+	"WhoisHere"
+	"TL"
+	"TR"
+	"BL"
+	"BR"
+        "WMNET"
+        "wmnet"
+}
+XorValue 2
+ShowIconManager
+IconManagerGeometry "=130x10-0+138" 1
+IconifyByUnMapping
+IconManagerDontShow
+{
+	"Virtual Desktop"
+        "VTWM Desktop"
+	"xbiff"
+	"xmeter"
+	"myclock"
+	"Monitor"
+	"WhoisHere"
+	"TL"
+	"TR"
+	"BL"
+	"BR"
+        "WMNET"
+        "wmnet"
+}
+NailedDown 
+{
+	"Virtual Desktop"
+	"xbiff"
+	"VTWM Icon Manager"
+	"xmeter"
+	"myclock"
+	"WhoisHere"
+	"TL"
+	"TR"
+	"BL"
+	"BR"
+        "WMNET"
+        "wmnet"
+}
+DontShowInDisplay
+{
+	"Virtual Desktop"
+	"myclock"
+	"WhoisHere"
+	"xbiff"
+	"TL"
+	"TR"
+	"BL"
+	"BR"
+        "WMNET"
+        "wmnet"
+}
+NoGrabServer
+Doors
+{
+"TL"	"63x17-67+96"	"+0+0"
+"TR"	"63x17-0+96"	"+1400+0"
+"BL"	"63x17-67+117"	"+0+940"
+"BR"	"63x17-0+117"	"+1400+940"
+}
+DecorateTransients
+NoMenuShadows
+NoHighlight
+{
+	"xbiff"
+	"myclock"
+	"WhoisHere"
+	"xmeter"
+}
+FixTransientVirtualGeometries
+
+TitleFont "-*-lucida-*-r-*-*-*-80-*-*-*-*-*-*"
+ResizeFont "-adobe-helvetica-bold-r-normal--*-80-*-*-*-*-*-*"
+MenuFont "-*-charter-bold-r-*-*-*-80-*-*-*-*-*-*"
+IconFont "-adobe-helvetica-bold-r-normal--*-80-*-*-*-*-*-*"
+IconManagerFont "-*-lucida-bold-r-*-*-*-80-*-*-*-*-*-*"
+DoorFont "-*-lucida-bold-r-*-*-*-80-*-*-*-*-*-*"
+VirtualDesktopFont "*fixed-medium-r-*--8-*-iso8859-*"
+
+Pixmaps
+{
+	TitleHighlight "/home/crocus5/st/uce/pics/bitmap/hand.xbm"
+	RealScreenPixmap "/home/crocus5/st/uce/pics/bitmap/desk.xbm"
+#	TitleHighlight "/usr/local/include/X11/bitmaps/hlines2"
+}
+
+Monochrome
+{       
+	BorderColor		"black"
+	BorderTileForeground	"black"
+	BorderTileBackground	"white"
+	TitleForeground		"black"
+	TitleBackground		"white"
+}
+
+Color
+{
+	DefaultBackground	"dark orchid"
+	DefaultForeground	"aquamarine"
+	BorderColor		"cyan"
+	{
+		"xbiff"		"black"
+		"xmeter"	"black"
+		"myclock"	"black"
+		"WhoisHere"	"black"
+	}
+	BorderTileBackground	"black"
+	BorderTileForeground	"darkorchid4"
+	TitleBackground		"dark orchid"
+	TitleForeground		"aquamarine"
+	MenuBackground		"dark orchid"
+	MenuForeground		"aquamarine"
+	MenuTitleBackground	"medium orchid"
+	MenuTitleForeground	"cyan"
+	IconBackground		"dark orchid"
+	IconForeground		"aquamarine"
+	IconBorderColor		"black"
+	IconManagerBackground	"dark orchid"
+	IconManagerForeground	"aquamarine"
+	IconManagerHighlight	"cyan"
+	DesktopDisplayBackground	"dark orchid"
+	DesktopDisplayForeground	"cyan"
+	DesktopDisplayBorder		"aquamarine"
+	DoorBackground		"dark orchid"
+	DoorForeground		"aquamarine"
+	RealScreenBackground	"dark orchid"
+	RealScreenForeground	"aquamarine"
+	VirtualBackground	"dark orchid"
+	VirtualForeground	"aquamarine"
+}
+
+#
+# Define some useful functions
+#
+MoveDelta 3
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+#
+# Set some useful bindings.
+#
+Button1 = : root : f.menu "main"
+Button2 = : root : f.menu "middle"
+Button3 = : root : f.menu "logins"
+
+Button1 = m : window|icon : f.function "move-or-raise"
+Button2 = m : window|icon : f.raiselower
+Button3 = m : window|icon : f.resize
+
+Button1 = s : window : f.zoom
+Button2 = s : window : f.fullzoom
+Button3 = s : window : f.hzoom
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+Button3 = : title : f.resize
+
+Button1 = : icon : f.function "move-or-iconify"
+Button2 = : icon : f.iconify
+
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.iconify
+Button3 = : iconmgr : f.iconify
+
+Button1 = : door : f.enterdoor
+Button3 = : door : f.refresh
+
+Button3 = : virtual|desktop : f.refresh
+
+EnhancedExecResources
+
+#
+# And menus
+#
+menu "main"
+{
+"VTWM"		f.title
+"Window"	f.menu "winmenu"
+"Screen"	f.menu "scrmenu"
+"Exit"		("red":"cyan")	f.quit
+}
+
+menu "winmenu"
+{
+"Windows"	f.title
+"Iconify"	f.iconify
+"Resize"	f.resize
+"Move"		f.move
+"Force Move"	f.forcemove
+"Raise"		f.raise
+"Lower"		f.lower
+"Zoom V"	f.zoom
+"Zoom H"	f.horizoom
+"Full Zoom"	f.fullzoom
+"Identify"	f.identify
+"Kill"		("red":"cyan")	f.destroy
+"Delete"	("red":"cyan")	f.delete
+}
+
+menu "scrmenu"
+{
+"Screen"	f.title
+"Clear Col"	f.colormap "default"
+"Refresh"	f.refresh
+"Restart"       f.restart
+"Version"       f.version
+}
+
+menu "middle"
+{
+"Middle"	f.title
+"xterm"         !"xterm"
+"Run.."         !"gmrun"
+"Chrome"	!"chromeA"
+"PSI"   	!"psi"
+"Xv"		!"xv"
+"Xpaint"	!"xpaint"
+"Calc"		!"xcalc"
+"Wmnet"         !"wmnet -l -W run0"
+"XLOCK"		("red":"cyan") !"xlock"
+}
+
+menu "logins"
+{
+"Logins"	f.title
+"Current"	!"xterm -ut -bg black -fg cyan -cr violet"
+"Floppy"	f.menu "floppy"
+}
+
+menu "floppy"
+{
+"Floppy Disk"	f.title
+"Insert"	!"volcheck"
+"Eject"		!"eject"
+}
