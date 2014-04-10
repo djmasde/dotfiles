@@ -1,0 +1,296 @@
+#
+# $XConsortium: system.twmrc,v 1.8 91/04/23 21:10:58 gildea Exp $
+#
+# A little $HOME/.twmrc by Thomas Eriksson brummelufs@hotmail.com
+#
+# Modified (just colors and some menu options) by Istvan Keppler keppler@lajli.gau.hu
+#
+#   twm... the original and the best...
+#
+
+NoGrabServer
+#NoDefaults
+RestartPreviousState
+DecorateTransients
+DontMoveOff
+RandomPlacement
+#MenuFont         "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#TitleFont        "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#IconManagerFont  "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-**"
+#IconFont	 "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#ResizeFont       "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#WorkSpaceFont	 "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+
+MenuFont         "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+TitleFont        "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+IconManagerFont  "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+IconFont         "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+ResizeFont       "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+
+#ClientBorderWidth 2
+BorderWidth 3
+ButtonIndent 2
+NoHighlight
+AutoRelativeResize
+#DefaultBackground
+FramePadding 0
+#ForceIcons
+NoRaiseOnMove
+OpaqueMove
+Zoom 8
+
+
+# This is for hiding the ugly menubar in windows who dont need em.
+NoTitle
+{
+ #   "x11amp"         # x11amp, the winamp lookalike, http://x11amp.ml.org.
+ #   "xlogo"          # a must have :)
+     "xosview"
+     "myclock"
+     "wmnet"
+     "WMNET"
+}
+
+Monochrome
+{       
+	BorderColor		"black"
+	BorderTileForeground	"black"
+	BorderTileBackground	"white"
+	TitleForeground		"black"
+	TitleBackground		"white"
+}
+
+Color
+{
+	DefaultBackground	"dark orchid"
+	DefaultForeground	"aquamarine"
+	BorderColor		"cyan"
+	{
+		"xbiff"		"black"
+		"xmeter"	"black"
+		"myclock"	"black"
+		"WhoisHere"	"black"
+	}
+	BorderTileBackground	"black"
+	BorderTileForeground	"darkorchid4"
+	TitleBackground		"dark orchid"
+	TitleForeground		"aquamarine"
+	MenuBackground		"dark orchid"
+	MenuForeground		"aquamarine"
+	MenuTitleBackground	"medium orchid"
+	MenuTitleForeground	"cyan"
+	IconBackground		"dark orchid"
+	IconForeground		"aquamarine"
+	IconBorderColor		"black"
+	IconManagerBackground	"dark orchid"
+	IconManagerForeground	"aquamarine"
+	IconManagerHighlight	"cyan"
+	DesktopDisplayBackground	"dark orchid"
+	DesktopDisplayForeground	"cyan"
+	DesktopDisplayBorder		"aquamarine"
+	RealScreenBackground	"dark orchid"
+	RealScreenForeground	"aquamarine"
+}
+
+#
+# Define some useful functions for motion-based actions.
+#
+MoveDelta 1
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+#
+# Set some useful bindings.  Sort of uwm-ish, sort of
+# simple-button-ish
+#
+Button1 = : root : f.menu "prog"
+Button2 = : root : f.delete
+Button3 = : root : f.menu "window"
+
+Button1 = m : window|icon : f.function "move-or-lower"
+Button2 = m : window|icon : f.iconify
+Button3 = m : window|icon : f.function "move-or-raise"
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+Button3 = : title : f.iconify
+
+Button1 = : icon : f.function "move-or-iconify"
+#Button2 = : icon : f.destroy
+Button3 = : icon : f.iconify
+
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.destroy
+Button3 = : iconmgr : f.iconify
+
+# This is for the window bar
+#LeftTitleButton  "/usr/X11/include/bitmaps/checkmark.xbm"  = f.delete
+#LeftTitleButton	 "/usr/X11R6/include/X11/bitmaps/xm_noenter16" = f.delete
+#RightTitleButton "/usr/X11/include/bitmaps/menu12"  = f.resize
+
+
+#
+# And a menus with the usual things
+#
+menu "prog"
+{
+"Progs"         f.title
+"Urxvt"         f.exec "urxvt&"
+"Run.."         f.exec "gmrun&"
+"Wmnet"         f.exec "wmnet -l -W run0&"
+"Chrome"        f.exec "chromeA&"	
+"Seamonkey"     f.exec "seamonkey&"
+"MOC"		f.exec "xterm -e mocp&"
+"PSI"		f.exec "psi&"
+"Xnetload"      f.exec "xnetload -nc -ni -i wlan0&"
+""              f.nop
+"Files"		f.menu "files"
+"Editors"	f.menu "editors"
+"Internet"      f.menu "internet"
+"Graphics"      f.menu "graphics"
+"Viewers"	f.menu "viewers"
+"Music"         f.menu "music"
+"Games"		f.menu "games"
+"Utilities"     f.menu "utilities"
+"System"	f.menu "system"
+}
+
+menu "files"
+{
+"Files"		f.title
+"MC"		f.exec "xterm -sl 255 -bg black -fg white -e mc &"
+}
+
+menu "editors"
+{
+"Editors"	f.title 
+"Leafpad"	f.exec "leafpad &"
+"Vim"		f.exec "xterm -bg black -fg white -e vim &"
+"Nano"		f.exec "xterm -bg black -fg white -e nano &"
+}
+
+menu "system"
+{
+"System" 	f.title
+"Xosview"	f.exec "xosview &"
+"Top"		f.exec "xterm -bg black -fg white -e top &"
+}
+
+menu "viewers"
+{
+"Viewers"	f.title
+"Ghostview"	f.exec "gv &"
+"Xpdf"	        f.exec "xpdf &"	
+}
+
+menu "internet"
+{
+"Internet"    f.title
+"Chrome"      f.exec "chromeA &"
+"Seamonkey"   f.exec "seamonkey &"
+"Lynx"        f.exec "xterm -bg black -fg white -e lynx &"
+}
+
+menu "graphics"
+{
+"Graphics"      f.title
+"Feh"           f.exec "feh&"
+"Gimp"          f.exec "gimp &"
+"Xpaint"        f.exec "xpaint&"
+"Gpicview"      f.exec "gpicview &"
+
+}
+
+menu "music"
+{
+"Music"	        f.title
+"CdPlayer"	f.exec "xterm -bg black -fg white -e cd-console &"
+"MOCP"	        f.exec "xterm -bg black -fg white -e mocp &"
+"Mplayer"	f.exec "xterm -e mplayer *.flv &"
+"Mplayer (mp4)"	f.exec "xterm -e mplayer *.mp4 &"
+"Xine"          f.exec "xine&"
+}
+
+menu "games"
+{
+"Games"		f.title
+"Zsnes"         f.exec "zsnes&"
+"Zednafen"      f.exec "zednafen&"
+"Supertux"      f.exec "supertux&"
+}
+
+menu "utilities"
+{
+"Utilities"      f.title
+"Xman"		f.exec "xman -rv &"
+"toprump"       f.exec "xterm -e toprump&"
+"Xcalc"		f.exec "xcalc &"
+}
+
+menu "window"
+{
+"X Windows"      f.title
+"Kill Window"    f.destroy
+"Delete Window"  f.delete
+""               f.nop
+"Maximize"       f.fullzoom
+"Minimize"       f.iconify
+#"Resize"         f.resize
+"Move"           f.move
+#"Raise"          f.raise
+#"Lower"          f.lower
+""               f.nop
+"Focus"          f.focus
+"Unfocus"        f.unfocus
+"Show Iconmgr"   f.showiconmgr
+"Hide Iconmgr"   f.hideiconmgr
+"Identify"       f.identify
+"Version"        f.version
+""               f.nop
+"Screensaver"    f.menu "screensaver" 
+"Redraw"         f.refresh
+"Refresh"        f.exec "xrefresh&"
+"Restart"        f.restart
+"Quit"           f.menu "quit"
+}
+
+menu "quit"
+{
+"Really Quit?"     f.title
+"No"               f.nop
+"Yes"              f.quit
+}
+
+menu "screensaver"
+{
+"ZZzz..."        f.title
+"Laser"          f.exec "xlock -nolock -mode laser &"
+"Qix"            f.exec "xlock -nolock -mode qix &"
+"Star trek"      f.exec "xlock -nolock -mode star &"
+"Galaxy"         f.exec "xlock -nolock -mode galaxy -wireframe&"
+"Pyrotechnical"  f.exec "xlock -nolock -mode pyro -wireframe &"
+"Swarm"          f.exec "xlock -nolock -mode swarm &"
+"Linux"          f.exec "xlock -nolock -mode flag &"
+}
+
+#Icons
+{
+#     "XTerm"   "/usr/X11R6/include/X11/bitmaps/Term"
+#     "x11amp"  "/usr/include/X11/bitmaps/xfm_au.xbm"
+#}
+
+Cursors
+{
+                         Frame     "left_ptr"
+                         Title     "left_ptr"
+                         Icon      "left_ptr"
+                         IconMgr   "left_ptr"
+                         Move      "fleur"
+                         Resize    "fleur"
+                         Menu      "hand1"
+                         Button    "hand2"
+                         Wait      "clock"
+                         Select    "dot"
+                         Destroy   "pirate"
+}
