@@ -8,12 +8,15 @@
 #   twm... the original and the best...
 #
 
+ShowIconManager
 NoGrabServer
 #NoDefaults
 RestartPreviousState
 DecorateTransients
 DontMoveOff
 RandomPlacement
+IconifyByUnmapping
+IconRegion "450x400+5-5" South West 125 25
 #MenuFont         "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
 #TitleFont        "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
 #IconManagerFont  "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-**"
@@ -50,6 +53,14 @@ NoTitle
      "wmnet"
      "WMNET"
 }
+
+IconManagerDontShow
+{
+     "myclock"
+     "wmnet"
+     "WMNET"
+}
+
 
 Monochrome
 {       
@@ -241,6 +252,7 @@ menu "window"
 #"Raise"          f.raise
 #"Lower"          f.lower
 ""               f.nop
+#"Show Windows"   f.warpto
 "Focus"          f.focus
 "Unfocus"        f.unfocus
 "Show Iconmgr"   f.showiconmgr
