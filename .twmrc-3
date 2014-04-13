@@ -53,6 +53,8 @@ NoTitle
      "myclock"
      "wmnet"
      "WMNET"
+     "rclock"
+     "Clock"
 }
 
 IconManagerDontShow
@@ -60,6 +62,8 @@ IconManagerDontShow
      "myclock"
      "wmnet"
      "WMNET"
+     "rclock"
+     "Clock"
 }
 
 
