@@ -6,6 +6,7 @@
 # Modified (just colors and some menu options) by Istvan Keppler keppler@lajli.gau.hu
 #
 #   twm... the original and the best...
+# Modified (To master ricer) by Dj_Dexter
 #
 
 ShowIconManager
@@ -252,7 +253,6 @@ menu "window"
 #"Raise"          f.raise
 #"Lower"          f.lower
 ""               f.nop
-#"Show Windows"   f.warpto
 "Focus"          f.focus
 "Unfocus"        f.unfocus
 "Show Iconmgr"   f.showiconmgr
