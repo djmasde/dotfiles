@@ -2,7 +2,11 @@
 #parcellite &
 sh /home/dexter4/.fehbg &
 #xcompmgr -c &
-#homologate the xterm fonts to dzen2 and ok :)
+#sudo wicd-gtk &
+#wicd-curses rocks =)
+#xterm -T WICD -e sudo wicd-curses &
+#conky -c /home/dexter4/.conkyrc-console |dzen2 -ta left &
+#hologate the xterm fonts to dzen2 and ok :)
 #emm suggestion of 4chan /g/ people :)
 #conky -c /home/dexter4/.conkyrc-console |dzen2 -ta left -fg '#ddccbb' -fn '-*-terminus-*-r-normal-*-*-120-*-*-*-*-iso8859-*' &
 #conky -c  $HOME/.conkyrc-console |dzen2 -ta left -fg '#ddccbb' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
@@ -37,6 +41,17 @@ setxkbmap es &
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-lucida-*-*-*-sans-10-*-*-*-*-*-*-*' &
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 | dzen2 -ta right -fg '#c3c2c5' -fn '-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*'
-conky -c /home/dexter4/.conky-wifi | dzen2 -ta right -fg '#c3c2c5' -fn '-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*' &
-exec 9wm -nostalgia
+#conky -c /home/dexter4/.conky-wifi | dzen2 -ta right -fg '#c3c2c5' -fn '-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*' &
+xclock -name myclock -bg black -fg white -digital -geometry 300x25-1-1 -fn "-*-charter-*-*-*-*-*-140-*-*-*-*-*-*" &
+#exec 9wm -nostalgia
+#xterm &
+#exec tvtwm
+exec twm
+#exec /usr/bin/X11/fvwm
+#exec vtwm
+#exec flwm
+#exec blackbox
+#exec mwm
+#exec lainwm
+#exec uwm
 #/usr/local/bin/compiz --indirect-rendering --keep-desktop-hints --loose-binding --sm-disable gconf
