@@ -1,0 +1,186 @@
+#
+# $XConsortium: system.twmrc /main/9 1996/10/16 16:14:38 kaleb $
+# 
+# Default twm configuration file; needs to be kept small to conserve string
+# space in systems whose compilers don't handle medium-sized strings.
+#
+# Sites should tailor this file, providing any extra title buttons, menus, etc.
+# that may be appropriate for their environment.  For example, if most of the
+# users were accustomed to uwm, the defaults could be set up not to decorate
+# any windows and to use meta-keys.
+# twm riced, for non or nostalgic mode on? o_O 
+# twm config edited by Dj_Dexter at level master ricer xD
+
+ShowIconManager
+DontMoveOf
+NoGrabServer
+NoTitle
+RandomPlacement
+RestartPreviousState
+DecorateTransients
+IconifyByUnmapping #Don't show twm windows icons (mm molest?)
+#TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+#ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+#MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+#IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+#IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+
+MenuFont         "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+TitleFont        "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+IconManagerFont  "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+IconFont         "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+ResizeFont       "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+BorderWidth 4 
+
+Color
+{
+    BorderColor "gray70"
+    {
+#	"XTerm"	  "red"
+    }
+    DefaultBackground "lightcyan4"
+    DefaultForeground "gray85"
+    TitleBackground "rgb:2/0/4"
+    TitleForeground "rgb:8/0/f"
+    MenuBackground "rgb:0/8/f"
+    MenuForeground "rgb:0/2/4"
+    MenuTitleBackground "rgb:0/2/4"
+    MenuTitleForeground "rgb:0/8/f"
+    IconBackground "gray70"
+    IconForeground "gray90"
+    IconBorderColor "rgb:0/0/f"
+    IconManagerBackground "rgb:1/1/4"
+    IconManagerForeground "rgb:4/4/F"
+}
+
+# This is for hiding the ugly menubar in windows who dont need em.
+NoTitle
+{
+ #   "x11amp"         # x11amp, the winamp lookalike, http://x11amp.ml.org.
+ #   "xlogo"          # a must have :)
+     "xosview"
+     "myclock"
+     "wmnet"
+     "WMNET"
+     "rclock"
+     "Clock"
+}
+
+IconManagerDontShow
+{
+     "myclock"
+     "wmnet"
+     "WMNET"
+     "rclock"
+     "Clock"
+}
+
+#
+# Define some useful functions for motion-based actions.
+#
+MoveDelta 3
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+Function "focus-move" { f.raise f.deltastop f.move }
+Function "window-client" { f.delete f.deltastop f.destroy }
+#
+# Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
+#
+Button1 = : frame : f.function "focus-move"
+Button2 = : frame : f.resize
+Button3 = : frame : f.iconify
+Button4 = : window | frame : f.function "focus-move"
+Button5 = : window | frame : f.resize
+
+Button1 = : root : f.menu "prog"
+Button3 = : root : f.menu "defops"
+Button2 = : root : f.menu "movement"
+#Button4 = : root : f.menu "admin"
+
+Button1 = m : all : f.function "move-or-lower"
+Button3 = m : all : f.iconify
+button2 = m : all : f.menu "movement"
+Button5 = m : window | frame : f.delete
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+
+Button1 = : icon : f.function "move-or-iconify"
+Button2 = : icon : f.iconify
+
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.iconify
+
+"Left"  = m : all : f.warpring "next"
+"F1"    = : all : f.iconify
+"z"	= m : window : f.delete
+"a"	= m : window : f.destroy
+
+#Icons
+#{
+#	"XTerm"  "/home/chris/.x/xterm.icon"
+#	"Buddy List" "/home/chris/.x/aim.icon"
+#}
+#
+# And a menus with the usual things
+#
+menu "prog"
+{
+"PROGRAMS"	f.title
+"urxvt"         f.exec "urxvt&"
+#"xterm"         f.exec "xterm&"
+"Run.."         f.exec "gmrun&"
+"Chrome"        f.exec "chromeX&"	
+"NCMPCPP"	f.exec "urxvt -e ncmpcpp&"
+"PSI"		f.exec "psi&"
+"Wmnet"         f.exec "wmnet -l -W run0&"
+"Admin"         f.menu "admin"
+#"Xnetload"      f.exec "xnetload -nc -ni -i wlan0&"
+
+}
+
+menu "defops"
+{
+"MAIN"	f.title
+"Iconify"	f.iconify
+"Identify"      f.identify
+"Resize"	f.resize
+"Move"		f.move
+"Raise"		f.raise
+"Lower"		f.lower
+"Refresh"       f.exec "xrefresh&"
+"Delete"        f.delete
+"Version"       f.version
+"Show Iconmgr"	f.showiconmgr
+"Hide Iconmgr"	f.hideiconmgr
+"x Window"	("rgb:0/2/4":"rgb:4/b/f") f.delete
+"Restart"	f.restart
+"Exit"		f.quit
+"REALLY Exit"   ("rgb:8/0/0":"rgb:0/8/f") f.exec "killall sleep"
+"x Client"      ("rgb:8/0/0":"rgb:4/b/f") f.destroy
+}
+menu "movement" 
+{
+"ADJUST"	f.title
+"Maximize"      f.fullzoom 
+"Adjust Size"   f.resize 
+"--->"          f.rightzoom 
+"<---"		f.leftzoom
+"<-->"		f.horizoom
+"^^^^"		f.topzoom
+"VVVV"		f.bottomzoom
+"^V^V"		f.zoom
+}
+menu "admin"
+{
+
+"ADMIN"	f.title
+"xterm"         f.exec "xterm -bg black -fg white&"
+"xhost +"	f.exec "xhost +"
+"vncserver"	f.exec "vncserver -geometry 640x480&"
+"vncviewer"     f.exec "vncviewer&"
+"time"		f.exec "xmessage `date`&"
+"xmix"		f.exec "xmix&"
+"xlock"		f.exec "xlock&"
+}
