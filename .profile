@@ -5,6 +5,7 @@
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
 export PATH HOME TERM
 export PKG_PATH=http://ftp.openbsd.org/pub/OpenBSD/snapshots/packages/i386/
+export CVSROOT=anoncvs@anoncvs.ca.openbsd.org:/cvs
 export GTK_IM_MODULE=xim
 export LESSCHARSET=utf-8
 export LC_CTYPE=en_US.UTF-8
