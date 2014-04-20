@@ -141,7 +141,8 @@ menu "prog"
 "Qupzilla"      f.exec "qupzilla&"	
 "MOC"		f.exec "urxvt -e mocp&"
 "PSI"		f.exec "psi&"
-"Xnetload"      f.exec "xnetload -nc -ni -i wlan0&"
+"WMNET"         f.exec "wmnet -l -W wlan1&"
+#"Xnetload"      f.exec "xnetload -nc -ni -i wlan0&"
 "Admin"         f.menu "admin"
 }
 
