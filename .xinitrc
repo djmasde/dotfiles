@@ -13,7 +13,9 @@ sh /home/dexter4/.fehbg &
 xbindkeys &
 autocutsel &
 setxkbmap es &
-#xsetroot -cursor_name left_ptr & 
+#wmwave &
+#wmload -shape -u 2 -exe ksysguard &
+#xsetroot -cursor_name left_ptr &
 #exec 9wm -nostalgia -virtuals 14
 #exec /usr/local/bin/ratpoison
 #conky -c /home/dexter4/.conkyrc-console | while read -r; do xsetroot -name "$REPLY"; done &
@@ -32,7 +34,9 @@ setxkbmap es &
 #exec /usr/local/bin/novawm
 #exec tvtwm
 #exec vtwm
-#exec twm
+#xclock -name myclock -bg black -fg white -digital -geometry 300x25-1-1 -fn "-*-charter-*-*-*-*-*-140-*-*-*-*-*-*" &
+xclock -name myclock -bg black -fg white -digital -geometry 300x25-1-731 -fn "-*-charter-*-*-*-*-*-140-*-*-*-*-*-*" &
+exec twm
 #exec x9wm -nostalgia -virtuals 14
 #exec lwm
 #exec ctwm
@@ -40,6 +44,9 @@ setxkbmap es &
 #exec /usr/local/bin/ratpoison
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-lucida-*-*-*-sans-10-*-*-*-*-*-*-*' &
-exec bash /home/dexter4/wifistatusbar2xx wlan0 | dzen2 -ta right -fg '#c3c2c5' -fn '-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*'
-exec 9wm -nostalgia
+#bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*' &
+#exec 9wm -nostalgia -term xterm
+#exec startkde
+#exec openbox
+#exec openbox-kde-session
 #/usr/local/bin/compiz --indirect-rendering --keep-desktop-hints --loose-binding --sm-disable gconf
