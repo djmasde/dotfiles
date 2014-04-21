@@ -75,6 +75,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ippublica='curl ifconfig.me'
 #get 4chan images :problem moot? since /src/ is removed in i4cdn.org, this version gets ok :3
+#parameters: 4chandl dir to images + 4chan url thread ex: weadedir + thread of 4chan url
 function 4chandlx ()
 {
 wget -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D i.4cdn.org -e robots=off -P $1 $2;
