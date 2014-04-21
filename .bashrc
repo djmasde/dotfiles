@@ -74,9 +74,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ippublica='curl ifconfig.me'
-function 4chandl () 
-{ 
-wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/src/ -P . "$1" 
+#get 4chan images :problem moot? since /src/ is removed in i4cdn.org, this version gets ok :3
+function 4chandlx ()
+{
+wget -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D i.4cdn.org -e robots=off -P $1 $2;
 }
 function 2chandl () 
 { 
