@@ -16,6 +16,10 @@ for more information.
 4.1 copy to /etc/dhclient.conf
 4.2 chattr +i /etc/dhclient.conf (if dhclient overwrites it)
 4.3 Enjoy the custom renew and essid :fufufu, you :problem?
+4.3 Added dhclient.conf.template for wicd
+4.4 copy to /etc/wicd/
+4.5 restart wicd daemon
+4.6 Enjoy the custom renew and essid :fufufu you :3
 
 5 .Xdefaults now requires tewi fonts: https://github.com/neeee/tewi-font
 
