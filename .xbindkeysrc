@@ -84,6 +84,15 @@ Control+shift+F1
 Control+shift+F2
 "ncmpcpp next"
 Control+shift+F3
+"mocp -G"
+alt+shift+F1
+"mocp -r"
+alt+shift+F2
+"mocp -f"
+alt+shift+F3
+"mocp -x"
+alt+shift+F4
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
