@@ -136,7 +136,7 @@ menu "prog"
 "PROGRAMS"	f.title
 "xterm"         f.exec "xterm&"
 "urxvt"         f.exec "urxvt&"
-"wicd-curses"   f.exec "xterm -e wicd-curses&"
+"wicd-curses"   f.exec "xterm -T WICD -e wicd-curses&"
 "Run.."         f.exec "gmrun&"
 "Qupzilla"      f.exec "qupzilla&"	
 "MOC"		f.exec "urxvt -e mocp&"
