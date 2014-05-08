@@ -69,7 +69,7 @@ XTerm*color7:  #665c64
 XTerm*color15: #c3c2c5
 
 ! Xorg cursor
-Xcursor*theme            : Neutral_Plus
+!Xcursor*theme            : Neutral_Plus
 
 ! Misc settings
 URxvt*cursorBlink        : false
@@ -86,9 +86,9 @@ URxvt*visualBell         : true
 URxvt*internalBorder     : 2
 
 ! Extensions
-URxvt*perl-ext-common    : default,matcher
-URxvt*matcher*button     : 1
-URxvt*url-launcher       : firefox
+!URxvt*perl-ext-common    : default,matcher
+!URxvt*matcher*button     : 1
+!URxvt*url-launcher       : firefox
 
 ! Fonts
 !#define fonts \
@@ -413,6 +413,28 @@ dclock*miltime:    no
 !Mwm*menu*foreground: cyan
 !Mwm*menu*fontList: -b&h-lucida-medium-r-*-*-12-*-*-*-*-*-*-*
 !Mwm*title*fontList: -b&h-lucida-medium-r-*-*-12-*-*-*-*-*-*-*
+
+!Older but good Window Manager (MWM) :3
+Mwm*XConsole.clientDecoration:  +resizeh
+Mwm*perfmeter.clientDecoration: +resizeh
+Mwm*control.clientDecoration:   +resizeh
+Mwm*XTerm*clientFunctions:      all
+Mwm*showFeedback:               resize placement move
+Mwm*keyboardFocusPolicy:        pointer
+Mwm*moveOpaque:                 true
+Mwm*iconImageMaximum:           48x48
+Mwm*fadeNormalIcon:             true
+Mwm*interactivePlacement:       true
+Mwm*Panner*ClientPinned:        True
+
+Mwm*background:                 #305050
+Mwm*activeBackground:           #506070
+Mwm*menu*background:            #9c917a
+Mwm*resizeBorderWidth:          4
+Mwm*frameBorderWidth:           4
+Mwm*activeBackgroundPixmap:     /home/dexter4/wea1.xpm
+Mwm*backgroundPixmap:           /home/dexter4/wea2.xpm
+Mwm*menu*backgroundPixmap:      /home/dexter4/wea2.xpm
 
 ! ---| EMACS |--- {{{
 !emacs*font: -jmk-neep alt-medium-r-semicondensed--11-100-75-75-c-50-iso8859-15
