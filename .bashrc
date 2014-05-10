@@ -78,7 +78,7 @@ alias ippublica='curl ifconfig.me'
 #parameters: 4chandl dir to images + 4chan url thread ex: weadedir + thread of 4chan url
 function 4chandl ()
 {
-wget -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D i.4cdn.org -e robots=off -P $1 $2;
+wget --no-check-certificate -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D i.4cdn.org -e robots=off -P $1 $2;
 }
 function 2chandl () 
 { 
