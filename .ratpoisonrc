@@ -133,7 +133,7 @@ exec killall xfce4-notifyd
 #exec xmobar -F '#ddccbb' -f '-*-terminus-*-r-normal-*-*-120-*-*-*-*-utf-8-*'
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2
 exec bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*'
-exec xsetroot -bg black -cursor_name left_ptr
+exec xsetroot -cursor_name left_ptr
 #xcompmgr is kawaii :)
 #exec compton -c -m 0.75 -b
 #Hides the rat a few seconds is is idle.
