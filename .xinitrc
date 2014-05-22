@@ -13,6 +13,8 @@ sh /home/dexter4/.fehbg &
 xbindkeys &
 autocutsel &
 setxkbmap es &
+perl /home/dexter4/wifisignalxd.pl &
+compton -m 0.75 -b &
 #wmwave &
 #wmload -shape -u 2 -exe ksysguard &
 #xsetroot -cursor_name left_ptr &
@@ -35,11 +37,12 @@ setxkbmap es &
 #exec tvtwm
 #exec vtwm
 #xclock -name myclock -bg black -fg white -digital -geometry 300x25-1-1 -fn "-*-charter-*-*-*-*-*-140-*-*-*-*-*-*" &
-xclock -name myclock -bg black -fg white -digital -geometry 300x25-1-731 -fn "-*-charter-*-*-*-*-*-140-*-*-*-*-*-*" &
-exec twm
+#xclock -name myclock -bg black -fg white -digital -geometry 300x25-1-731 -fn "-*-charter-*-*-*-*-*-140-*-*-*-*-*-*" &
+#exec twm
 #exec x9wm -nostalgia -virtuals 14
 #exec lwm
 #exec ctwm
+exec /usr/local/bin/dwm
 #exec /usr/local/bin/wmaker
 #exec /usr/local/bin/ratpoison
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
