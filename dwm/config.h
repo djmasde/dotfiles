@@ -1,23 +1,24 @@
 /* See LICENSE file for copyright and license details. */
-
+/* Colours and worspaces names in japanese, stealed from a 4chan user in a /g/ desktop thread  */
 /* appearance */
 //static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
 //static const char font[] = "-*-fixed-bold-*-*-*-13-*-*-*-*-*-*-*";
 //static const char font[]            ="*-dejavu sans light-*-*-*-*-13-*-*-*-*-*-*-*"
+//static const char font
 static const char font[]            = "7x13";
-static const char normbordercolor[] = "#4F4F4F";
-static const char normbgcolor[]     = "#000000";
-static const char normfgcolor[]     = "#DFDFDF"; // #36FF00
-static const char selbordercolor[]  = "#8F8F8F"; //  #6f6f6f // #0066ff
-static const char selbgcolor[]      = "#3F3F3F";
-static const char selfgcolor[]      = "#BFBFBF";
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const char normbordercolor[] = "#7588A3";
+static const char normbgcolor[]     = "#956671";
+static const char normfgcolor[]     = "#EDE7F4"; // #36FF00
+static const char selbordercolor[]  = "#956671"; //  #6f6f6f // #0066ff
+static const char selbgcolor[]      = "#20202E";
+static const char selfgcolor[]      = "#B5A7B7";
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int snap      = 1;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "General", "II", "III", "IV", "V", "VI", "IRC", "GIMP", "Nav" };
+static const char *tags[] = { "ichi", "ni", "san", "shi", "go", "roku", };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -29,19 +30,20 @@ static const Rule rules[] = {
         { "Snes9x",    NULL,       NULL,            0,       True,       -1 },
         { "XDosEmu",   NULL,       NULL,            0,       True,       -1 },
         { "Transmission-gtk", NULL, NULL,           0,       True,       -1 },
+        { "feh", NULL, NULL,           0,       True,       -1 },
 
 };
 
 /* layout(s) */
-static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact      = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster      = 1;    /* number of clients in master area */
 static const Bool resizehints = False; /* True means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "+",      tile },    /* first entry is default */
+	{ "-",      NULL },    /* no layout function means floating behavior */
+	{ "M",      monocle },
 };
 
 /* key definitions */
