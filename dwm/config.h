@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+/* Colours and workspaces names in japanese, stealed from a 4chan user in a /g/ desktop thread  */
 /* appearance */
 //static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
 //static const char font[] = "-*-fixed-bold-*-*-*-13-*-*-*-*-*-*-*";
