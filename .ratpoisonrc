@@ -27,9 +27,12 @@ set font "ohsnap:size=10"
 set bgcolor #2f2f2f
 #set fgcolor #418CDD
 #set fwcolor #418CDD
-set fgcolor #687888
-set fwcolor #687888
-set bwcolor #2f2f2f
+#set fgcolor #687888
+#set fwcolor #687888
+#set bwcolor #2f2f2f
+set fwcolor #956671
+set fgcolor #7588A3
+set bwcolor #7588A3
 
 # Display formats
 set infofmt %c: %t [%n]
