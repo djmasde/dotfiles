@@ -21,7 +21,7 @@ echo "50" >> /proc/sys/vm/vfs_cache_pressure
 echo "2" >> /proc/sys/vm/swappiness
 #zram o_O
 modprobe zram 
-echo $((400*1024*1024)) > /sys/block/zram0/disksize
+echo $((500*1024*1024)) > /sys/block/zram0/disksize
 mkswap /dev/zram0
 swapon -p 50 /dev/zram0
 #faking MAC
