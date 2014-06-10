@@ -9,6 +9,8 @@
 
 #For access to low memory mmap
 echo 0 > /proc/sys/vm/mmap_min_addr
+#For wireshark
+setcap cap_net_raw,cap_net_admin=eip /usr/bin/dumpcap
 #For wavemon
 setcap cap_net_admin=eip /usr/bin/wavemon
 #keep alive
