@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Revisited and fixed by Dj_Dexter 2013-09-24
-# re tested in slackware 14.0 and runs fine :)
+# Revisited and fixed by Dj_Dexter 2014-06-18
+# re tested in slackware 14.1 and runs fine :)
 # only works for wep encripted connections
+# now with dhcpcd usage o_O
 
 # die with honor
 function usage() {
@@ -24,6 +25,7 @@ function die() {
 # check for essid
 if [[ $1 ]]; then
 	# setup
+        #destroying dhcpcd
         pkill dhcpcd
 	echo "Starting..."
 	ifconfig wlan1 down
@@ -43,7 +45,7 @@ if [[ $1 ]]; then
         iwconfig wlan1 mode Managed
 	echo " -Connecting..."
 	echo
-        sleep 3
+        sleep 3 #sleep or dhcpcd not leases
         dhcpcd -h none wlan1
 	# announce success
 	if [[ $? -eq 0 ]]; then
