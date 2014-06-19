@@ -27,6 +27,8 @@ if [[ $1 ]]; then
 	# setup
         #destroying dhcpcd
         pkill dhcpcd
+        #replace with another interface, if is not wlan1
+        rm /var/lib/dhcpcd/dhcpcd-wlan1.lease
 	echo "Starting..."
 	ifconfig wlan1 down
 #	dhclient -r wlan1 -q
@@ -46,7 +48,7 @@ if [[ $1 ]]; then
 	echo " -Connecting..."
 	echo
         sleep 3 #sleep or dhcpcd not leases
-        dhcpcd -h none wlan1
+        dhcpcd -4 -l 7200 -h none wlan1
 	# announce success
 	if [[ $? -eq 0 ]]; then
 		echo
