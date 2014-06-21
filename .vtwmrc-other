@@ -1,0 +1,258 @@
+#
+# Personal .vtwmrc Willem Hendriks (NL)
+#
+# Control + space 	= launche xterm
+# Re-Edited By Dj_Dexter
+
+AutoPan 100
+AutoPanBorderWidth 0
+NaturalAutopanBehavior
+AutoPanWarpWithRespectToRealScreen 65
+PanDistanceY 100
+PanDistanceX 100
+SnapRealScreen
+PanResistance 0
+
+OpaqueMove
+IconifyByUnmapping
+NoTitleHighlight
+DecorateTransients
+DontMoveOff
+MaxWindowSize "1400x1050"
+RandomPlacement
+
+NoCaseSensitive
+NoGrabServer
+
+AutoRaiseDelay 0
+AutoRelativeResize
+MoveDelta 0
+
+DeiconifyToScreen
+ForceIcons
+IconDirectory "/usr/X11R6/include/X11/pixmaps/"
+IconRegion "600x75-200+0" North West 75 25
+ResizeRegion "NorthEast"
+RestartPreviousState
+UnknownIcon "monitor.xpm"
+WarpCursor
+
+SortIconManager
+IconManagerGeometry "500x19+1-20" 4
+
+FixManagedVirtualGeometries
+FixTransientVirtualGeometries
+VirtualDesktop "4x1+1038+973" 16
+
+ShallowReliefWindowButton
+
+BorderWidth             6
+BorderBevelWidth        1
+ButtonBevelWidth        0
+IconBevelWidth          1
+IconBorderWidth		2
+IconManagerBevelWidth   1
+InfoBevelWidth          2
+MenuBevelWidth          1
+TitleBevelWidth         1
+ButtonIndent		0
+ButtonBevelWidth	0
+TitleButtonBorderWidth  0
+FramePadding		4
+
+ClearBevelContrast      40
+DarkBevelContrast       40
+Icons
+{
+	"xterm"		"monitor.xpm"
+}
+
+NoTitle
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+}
+
+NailedDown
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xload"
+	"xeyes"
+}
+
+IconManagerDontShow
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xload"
+	"xeyes"
+}
+
+DontShowInDisplay
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xload"
+	"xeyes"
+        "XNetload"
+        "xnetload"
+}
+
+DontShowInVtwmWindows
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xload"
+	"xeyes"
+        "XNetload"
+        "xnetload"
+}
+
+AutoRaise
+{
+}
+
+Color
+{
+	DefaultBackground		"lightcyan4"
+	DefaultForeground		"gray85"
+	BorderColor			"gray70"
+	BorderTileBackground		"gray60"
+	BorderTileForeground		"gray60"
+	DoorBackground			"lightcyan4"
+	DoorForeground			"gray85"
+#	ActiveTitleBackground		"green"
+#	ActiveTitleForeground		"blue"
+	TitleBackground			"lightcyan4"
+	TitleForeground			"gray85"
+	MenuBackground			"gray20"
+	MenuForeground			"gray85"
+	MenuShadowColor			"gray20"
+	MenuTitleBackground		"gray20"
+	MenuTitleForeground		"lightcyan4"
+	IconBackground			"lightcyan4"
+	IconForeground			"gray85"
+	IconBorderColor			"gray85"
+	IconManagerBackground		"lightcyan4"
+	IconManagerForeground		"gray85"
+	VirtualBackground		"lightcyan4"
+	VirtualForeground		"black"
+	DesktopDisplayBackground	"gray60"
+	DesktopDisplayForeground	"gray60"
+	RealScreenBackground 		"lightcyan3"
+}
+
+#
+# Fonts
+#
+
+#MenuFont         "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#TitleFont        "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#IconManagerFont  "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-**"
+#IconFont	 "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#ResizeFont       "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+
+MenuFont         "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+TitleFont        "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+IconManagerFont  "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+IconFont	 "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+ResizeFont       "-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*"
+
+#
+# Titlebar buttons
+#
+
+NoDefaultTitleButtons
+
+LeftTitleButton ":xpm:bar" = f.delete
+RightTitleButton ":xpm:dot" = f.iconify
+RightTitleButton ":xpm:zoom" = f.resize
+
+#
+# Functions and Bindings
+#
+
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+Button1 = : root : f.menu "defops"
+Button2 = : root : f.menu "VTWM Windows"
+Button3 = : root : f.menu "winops"
+
+Button1 = m : window|icon : f.function "move-or-lower"
+Button2 = m : window|icon : f.resize
+Button3 = m : window|icon : f.resize
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
+
+Button1 = : icon : f.function "move-or-iconify"
+Button2 = : icon : f.iconify
+
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.iconify
+Button3 = : iconmgr : f.raise
+
+Button1 = : virtual | desktop : f.movescreen
+Button2 = : virtual | desktop : f.movescreen
+
+"Left"  = : root : f.panleft	"100"
+"Right"	= : root : f.panright	"100"
+
+# Control + Space = new xterm 
+"space" = c : root : f.exec "xterm &"
+"space" = c : virtual | desktop : f.exec "xterm &"
+"space" = c : window : f.exec "xterm &"
+
+#
+# Menus
+#
+
+menu "defops"
+{
+"    VTWM    "	f.title
+"xterm"		f.exec "xterm &"
+"qupzilla"	f.exec "qupzilla &"
+"Psi"           f.exec "psi &"
+"Torrent"       f.exec "ktorrent &"
+""		f.nop
+"zsnes" 	f.exec "zsnes &"
+"DosEmu"        f.exec "dosemu &"
+"Zednafen"      f.exec "zednafen &"
+""		f.nop
+"xnetload"      f.exec "xnetload -i wlan1 &"
+"Xnetload"      f.exec "xnetload -nc -ni -i wlan1 &"
+""              f.nop
+"Restart"	f.restart
+"Exit"		f.quit
+}
+
+
+menu "winops"
+{
+"   Window   "	f.title
+"Identify"	f.identify
+""		f.nop
+"AutoRaise"	f.autoraise
+"Iconify"	f.iconify
+"Resize"	f.resize
+"Move"		f.move
+""		f.nop
+"Raise"		f.raise
+"Lower"		f.lower
+"Nail"		f.nail
+"Focus"		f.focus
+""		f.nop
+"Fullzoom"	f.fullzoom
+"Horizoom"	f.horizoom
+"Vertzoom"	f.zoom
+""		f.nop
+"Kill"		f.destroy
+"Delete"	f.delete
+}
