@@ -5,7 +5,11 @@
 //static const char font[] = "-*-fixed-bold-*-*-*-13-*-*-*-*-*-*-*";
 //static const char font[]            ="*-dejavu sans light-*-*-*-*-13-*-*-*-*-*-*-*"
 //static const char font
-static const char font[]            = "7x13";
+// other metod for utf-8
+//static const char font[] = "-*-*-*-*-*-*-12-*-*-*-*-*-koi8-*";
+// for dwm with pango patch = utf-8 in dwm o_O
+static const char font []           = "Sans 8";
+//static const char font[]            = "7x13";
 static const char normbordercolor[] = "#7588A3";
 static const char normbgcolor[]     = "#956671";
 static const char normfgcolor[]     = "#EDE7F4"; // #36FF00
