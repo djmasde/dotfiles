@@ -5,7 +5,7 @@
 //static const char font[] = "-*-fixed-bold-*-*-*-13-*-*-*-*-*-*-*";
 //static const char font[]            ="*-dejavu sans light-*-*-*-*-13-*-*-*-*-*-*-*"
 //static const char font
-// other metod for utf-8
+// other method for utf-8
 //static const char font[] = "-*-*-*-*-*-*-12-*-*-*-*-*-koi8-*";
 // for dwm with pango patch = utf-8 in dwm o_O
 static const char font []           = "Sans 8";
