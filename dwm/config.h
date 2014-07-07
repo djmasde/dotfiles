@@ -32,6 +32,8 @@ static const Rule rules[] = {
         { "mplayer2",  NULL,       NULL,            0,       True,       -1 },
         { "mednafen",  NULL,       NULL,            0,       True,       -1 },
         { "Snes9x",    NULL,       NULL,            0,       True,       -1 },
+        { "zsnes",     NULL,       NULL,            0,       True,       -1 },
+        { "Leafpad",   NULL,       NULL,            0,       True,       -1 },
         { "XDosEmu",   NULL,       NULL,            0,       True,       -1 },
         { "Transmission-gtk", NULL, NULL,           0,       True,       -1 },
         { "feh", NULL, NULL,           0,       True,       -1 },
