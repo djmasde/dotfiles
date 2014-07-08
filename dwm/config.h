@@ -7,7 +7,7 @@
 //static const char font
 // other method for utf-8
 //static const char font[] = "-*-*-*-*-*-*-12-*-*-*-*-*-koi8-*";
-// for dwm with pango patch = utf-8 in dwm o_O
+// for dwm with pango patch = utf-8 in dwm
 static const char font []           = "Sans 8";
 //static const char font[]            = "7x13";
 static const char normbordercolor[] = "#7588A3";
