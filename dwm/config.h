@@ -35,6 +35,7 @@ static const Rule rules[] = {
         { "zsnes",     NULL,       NULL,            0,       True,       -1 },
         { "Leafpad",   NULL,       NULL,            0,       True,       -1 },
         { "XDosEmu",   NULL,       NULL,            0,       True,       -1 },
+        { "Xarchiver", NULL,       NULL,            0,       True,       -1 },
         { "Transmission-gtk", NULL, NULL,           0,       True,       -1 },
         { "feh", NULL, NULL,           0,       True,       -1 },
 
