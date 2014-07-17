@@ -67,8 +67,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[]  = { "gmrun", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]   = { "uxterm", NULL };
-static const char *termuxcmd[] = { "uxterm", "screen", NULL };
+static const char *termcmd[]   = { "urxvt", NULL };
+static const char *termuxcmd[] = { "urxvt", "screen", NULL };
 static const char *firexcmd[]  = { "qupzilla", NULL };
 static const char *mpdprev[] = { "ncmpcpp", "prev", NULL };
 static const char *mpdnext[] = { "ncmpcpp", "next", NULL };
