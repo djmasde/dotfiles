@@ -37,7 +37,8 @@ static const Rule rules[] = {
         { "XDosEmu",   NULL,       NULL,            0,       True,       -1 },
         { "Xarchiver", NULL,       NULL,            0,       True,       -1 },
         { "Wpa_gui",   NULL,       NULL,            0,       True,       -1 },
-        { "XPaint_es",   NULL,       NULL,            0,       True,       -1 },
+        { "XPaint_es", NULL,       NULL,            0,       True,       -1 },
+        { "Gpicview",  NULL,       NULL,            0,       True,       -1 },
         { "Transmission-gtk", NULL, NULL,           0,       True,       -1 },
         { "feh", NULL, NULL,           0,       True,       -1 },
 
