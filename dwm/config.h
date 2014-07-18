@@ -40,6 +40,7 @@ static const Rule rules[] = {
         { "XPaint_es", NULL,       NULL,            0,       True,       -1 },
         { "Gpicview",  NULL,       NULL,            0,       True,       -1 },
         { "Transmission-gtk", NULL, NULL,           0,       True,       -1 },
+        { "Xnp2",      NULL,       NULL,            0,       True,       -1 },
         { "feh", NULL, NULL,           0,       True,       -1 },
 
 };
