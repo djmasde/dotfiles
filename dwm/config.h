@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-/* Colours and workspaces names in japanese, stealed from a 4chan user in a /g/ desktop thread  */
+/* Workspaces names in japanese, stealed from a 4chan user in a /g/ desktop thread  */
 /* appearance */
 //static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
 //static const char font[] = "-*-fixed-bold-*-*-*-13-*-*-*-*-*-*-*";
@@ -10,11 +10,11 @@
 // for dwm with pango patch = utf-8 in dwm
 static const char font []           = "Sans 8";
 //static const char font[]            = "7x13";
-static const char normbordercolor[] = "#7588A3";
-static const char normbgcolor[]     = "#956671";
-static const char normfgcolor[]     = "#EDE7F4"; // #36FF00
-static const char selbordercolor[]  = "#956671"; //  #6f6f6f // #0066ff
-static const char selbgcolor[]      = "#20202E";
+static const char normbordercolor[] = "#36536E";
+static const char normbgcolor[]     = "#223445"; // #956671
+static const char normfgcolor[]     = "#B5A7B7"; //#FAD9A6 // #EDE7F4 // #36FF00
+static const char selbordercolor[]  = "#223445"; //  #6f6f6f // #0066ff
+static const char selbgcolor[]      = "#20202E"; 
 static const char selfgcolor[]      = "#B5A7B7";
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 1;       /* snap pixel */
