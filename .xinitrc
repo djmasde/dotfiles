@@ -64,6 +64,7 @@ exec bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -x 0 -y 1038 -ta right -fg
     #dwm 2> ~/.dwm.log
     # No error logging
 #    /usr/local/bin/dwm >/dev/null 2>&1
+#    /usr/bin/catwm >/dev/null 2>&1
 #done
 #/usr/local/bin/dwm
-exec catwm
+exec /usr/local/bin/catwm
