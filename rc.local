@@ -13,6 +13,8 @@ echo 0 > /proc/sys/vm/mmap_min_addr
 setcap cap_net_raw,cap_net_admin=eip /usr/bin/dumpcap
 #For wavemon
 setcap cap_net_admin=eip /usr/bin/wavemon
+#For netwatch
+setcap cap_net_raw,cap_net_admin=eip /usr/bin/netwatch
 #keep alive
 echo 60 > /proc/sys/net/ipv4/tcp_keepalive_time
 #show dmesg in normal user
