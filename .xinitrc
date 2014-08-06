@@ -50,7 +50,7 @@ compton -m 0.75 -b &
 #exec vtwm
 #exec bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -ta right -fg '#c3c2c5' -fn 
 #'-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
-exec bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -x 0 -y 1038 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
+exec bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -x 0 -y -1 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*' &
 #exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-lucida-*-*-*-sans-10-*-*-*-*-*-*-*' &
 #bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-dejavu sans-*-*-normal-*-9-*-*-*-*-*-*-*' &
 #exec 9wm -nostalgia -term xterm
