@@ -28,6 +28,8 @@ echo "2" >> /proc/sys/vm/swappiness
 #echo $((500*1024*1024)) > /sys/block/zram0/disksize
 #mkswap /dev/zram0
 #swapon -p 50 /dev/zram0
+#No Autosuspend usb
+echo "0" >> /sys/module/usbcore/parameters/autosuspend
 #faking MAC
 /sbin/ifconfig wlan0 down
 /sbin/ifconfig wlan0 down
