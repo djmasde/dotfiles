@@ -30,6 +30,9 @@ echo "2" >> /proc/sys/vm/swappiness
 #swapon -p 50 /dev/zram0
 #No Autosuspend usb
 echo "0" >> /sys/module/usbcore/parameters/autosuspend
+#For lm_sensors package
+modprobe lm75
+modprobe pc87360
 #faking MAC
 /sbin/ifconfig wlan0 down
 /sbin/ifconfig wlan0 down
