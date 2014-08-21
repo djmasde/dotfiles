@@ -22,6 +22,7 @@ for more information.
 4.4 copy to /etc/wicd/
 4.5 restart wicd daemon
 4.6 Enjoy the custom renew and essid :fufufu you :3
+4.7 dhcpcd wlanX -h none -l 7200 have the same effect :3
 
 5 .Xdefaults now requires tewi fonts: https://github.com/neeee/tewi-font
 
