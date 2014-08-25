@@ -23,6 +23,8 @@ for more information.
 4.5 restart wicd daemon
 4.6 Enjoy the custom renew and essid :fufufu you :3
 4.7 dhcpcd wlanX -h none -l 7200 have the same effect :3
+4.8 In debian, includes Kali linux is launched:
+dhcpcd-bin -h none -l 7200 wlan0
 
 5 .Xdefaults now requires tewi fonts: https://github.com/neeee/tewi-font
 
