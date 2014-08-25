@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "Cambiando el codigo de Pais al de Bolivia..."
+iw reg set BO &
+echo "Aumentando txpower a 1 Watio de potencia"
+iwconfig wlan0 txpower 30 &
+echo "Hecho :3" 
