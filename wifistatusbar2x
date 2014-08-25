@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ $1 ]; then
+	tarjeta=$1
+else
+	echo -n "Nombre de la tarjeta de red: "
+	read tarjeta
+fi
+
+while [ 1 ]
+do
+
+	fecha=$(date +"%d/%B - %H:%M:%S")
+	uptime=$(uptime | cut -d ',' -f 1 | grep -o 'up.*')
+	essid=$(/sbin/iwgetid $tarjeta -r)
+        AP="`/sbin/iwgetid --raw --ap | cut -c1-8`"
+        SENAL="`/sbin/iwconfig 2> /dev/null | sed -n "/${tarjeta}/{n;n;n;n;n;n;p;}" | awk -F'=' '{printf $NF}' | sed 's/\s//g'`"
+        BITR="`/sbin/iwconfig 2> /dev/null | sed -n "/${tarjeta}/{n;n;p;}" | sed -E 's/^[^=]+=([.0-9]+)\s.*/\1Mb\/s/'`"
+#        SONG="`/usr/bin/ncmpcpp --now-playing 2> /dev/null`"
+        SONG="`/usr/bin/mocp -Q %song-%artist--%state 2> /dev/null`"
+	echo "[ESSID:$essid $SENAL $AP $BITR ] {$fecha} $(id -un)@$(hostname) $SONG"
+	sleep 5s
+done
