@@ -1,0 +1,6 @@
+exec bash $HOME/wifistatusbar2xx wlan0 |dzen2 -x 0 -y -1 -ta right -fg '#c3c2c5' &
+autocutsel &
+xcompmgr -c &
+xbindkeys &
+sh $HOME/.fehbg
+exec 9wm
