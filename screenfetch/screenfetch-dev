@@ -26,6 +26,7 @@
 # to put forth suggestions/ideas. Thank you.
 # Little edited by Dj_Dexter
 # Small "hack" to display another rare wms includes twm, vtwm, lwm, ctwm, 9wm/w9wm :)
+# Now detects Kali Linux packages number, TODO: shows Kali GNU/Linux not Unknown (version)
 
 scriptVersion="3.1.0"
 
@@ -671,7 +672,7 @@ detectpkgs () {
 	case $distro in
 		'Arch Linux'|'ParabolaGNU/Linux-libre'|'Chakra'|'Manjaro') pkgs=$(pacman -Qq | wc -l) ;;
 		'Frugalware') pkgs=$(pacman-g2 -Q | wc -l) ;;
-		'Fuduntu'|'Ubuntu'|'Mint'|'SolusOS'|'Debian'|'LMDE'|'CrunchBang'|'Peppermint'|'LinuxDeepin'|'Trisquel'|'elementary OS') pkgs=$(dpkg --get-selections | wc -l) ;;
+		'Fuduntu'|'Ubuntu'|'Mint'|'SolusOS'|'Debian'|'LMDE'|'CrunchBang'|'Peppermint'|'LinuxDeepin'|'Trisquel'|'elementary OS'|'Kali') pkgs=$(dpkg --get-selections | wc -l) ;;
 		'Slackware') pkgs=$(ls -1 /var/log/packages | wc -l) ;;
 		'Gentoo'|'Sabayon'|'Funtoo') pkgs=$(ls -d /var/db/pkg/*/* | wc -l) ;;
 		'Fedora'|'openSUSE'|'Red Hat Linux'|'Mandriva'|'Mandrake'|'Mageia'|'Viperr') pkgs=$(rpm -qa | wc -l) ;;
