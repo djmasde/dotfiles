@@ -84,6 +84,8 @@ wget --no-check-certificate -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D i.4cdn.org
 function 2chandl () 
 { 
 wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/\*/src/ -P $1 $2;
+#delete *.htm if finish download
+rm $1*.htm
 }
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
