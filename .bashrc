@@ -17,6 +17,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 #for st
 echo $(tput smkx) >/dev/tty
+clear
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
