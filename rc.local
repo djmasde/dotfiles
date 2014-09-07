@@ -29,7 +29,8 @@ echo "2" >> /proc/sys/vm/swappiness
 #mkswap /dev/zram0
 #swapon -p 50 /dev/zram0
 #No Autosuspend usb
-echo "0" >> /sys/module/usbcore/parameters/autosuspend
+echo "-1" >> /sys/module/usbcore/parameters/autosuspend
+for i in /sys/bus/usb/devices/*/power/autosuspend; do echo -1 > $i; done
 #For lm_sensors package
 modprobe lm75
 modprobe pc87360
