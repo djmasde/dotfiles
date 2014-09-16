@@ -31,6 +31,9 @@ echo "2" >> /proc/sys/vm/swappiness
 #No Autosuspend usb
 echo "-1" >> /sys/module/usbcore/parameters/autosuspend
 for i in /sys/bus/usb/devices/*/power/autosuspend; do echo -1 > $i; done
+#using usb old sheme
+echo "Y" >> /sys/module/usbcore/parameters/old_scheme_first
+echo "N" >> /sys/module/usbcore/parameters/use_both_schemes
 #For lm_sensors package
 modprobe lm75
 modprobe pc87360
