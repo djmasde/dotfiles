@@ -49,7 +49,7 @@ display_type="ASCII"
 
 # WM & DE process names
 # Removed WM's: compiz
-wmnames=( fluxbox openbox blackbox xfwm4 metacity kwin icewm pekwm fvwm dwm awesome wmaker stumpwm musca xmonad i3 ratpoison scrotwm spectrwm wmfs wmii beryl subtle e16 enlightenment sawfish emerald monsterwm dminiwm compiz Finder herbstluftwm notion ctwm 9wm w9wm vtwm twm tvtwm windowlab smallwm lwm)
+wmnames=( fluxbox openbox blackbox xfwm4 metacity kwin icewm pekwm fvwm dwm awesome wmaker stumpwm musca xmonad i3 ratpoison scrotwm spectrwm wmfs wmii beryl subtle e16 enlightenment sawfish emerald monsterwm dminiwm compiz Finder herbstluftwm notion ctwm 9wm w9wm vtwm twm tvtwm windowlab smallwm lwm clementinewm )
 denames=( gnome-session xfce-mcs-manage xfce4-session xfconfd ksmserver lxsession gnome-settings-daemon mate-session mate-settings-daemon Finder )
 
 # Screenshot Settings
@@ -1202,6 +1202,7 @@ detectwm () {
                                                 'vtwm') WM="vtwm";;
                                                 'tvtwm') WM="tvtwm";;
                                                 'windowlab') WM="Windowlab";;
+                                                'clementinewm') WM="clementine";;
                                                 'smallwm') WM="SmallWm";;
                                                 'lwm') WM="lwm";;
                                                 'dwm') WM="dwm";;
