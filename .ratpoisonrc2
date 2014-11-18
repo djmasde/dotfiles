@@ -1,0 +1,92 @@
+escape C-i
+bind Escape abort
+rudeness 13
+warp off
+# Display formats
+set infofmt %c: %t [%n]
+set framefmt %t [%n]
+# Blank Monitor
+#bind grave exec xset dpms force off
+bind l exec xlock
+bind M-l exec xlock
+bind w exec /usr/local/share/ratpoison/allwindows.sh
+bind C-w exec /usr/local/share/ratpoison/allwindows.sh
+# Stuff
+
+# Applications
+bind f exec firefox
+bind C-f exec firefox
+#bind e exec firefox
+#bind C-e exec firefox
+bind c exec urxvt
+bind C-c exec urxvt
+bind p exec psi
+bind C-p exec psi
+#set font "-ypn-envypnd-medium-r-normal--13-130-75-75-c-90-iso8859-1"
+bind i exec dmenu_run -b
+bind M-i exec dmenu_run -b
+alias dunst exec dunst
+bind C-1 dunst
+# Sticky Windows
+bind d dedicate
+bind C-d dedicate
+
+# Undo
+bind u undo
+bind C-u undo
+#bind e exec emacs
+definekey top M-h hsplit
+definekey top M-v vsplit
+definekey top M-. colon
+# Printscreen!
+#definekey top Print exec mkdir ~/snapshots/; import -window root ~/snapshots/`date +%Y%m%d%H%M%S`.png
+# make a screenshot
+alias sshot exec scrot ~/screenshot-ratpoison-`date +%F`.png
+bind Print sshot
+# Date/Time
+bind C-a exec ratpoison -c "echo `date +'%r - %A %n    %D - %B'`  `cal | tail -n +2 | sed -e 's/^Su/\n\n Su/' -e 's/.*/ & /' -e \"s/\ $(date +%e) /\<$(date +%e)\>/\"`"
+bind C-s exec ratpoison -c "echo $(date +'%a %b %d %I:%M%p')"
+
+# ncmpcpp Control
+alias mpdpause exec ncmpcpp toggle
+bind M-z mpdpause
+alias mpdprev exec ncmpcpp prev
+bind M-x mpdprev
+alias mpdnext exec ncmpcpp next
+bind M-c mpdnext
+# Focus
+definekey top M-Tab next
+definekey top M-ISO_Left_Tab prev
+
+# Navigation
+definekey top C-S-Up focusup
+definekey top C-S-Left focusleft
+definekey top C-S-Down focusdown
+definekey top C-S-Right focusright
+definekey top s-Left prevscreen
+definekey top s-Right nextscreen
+# Workspaces
+exec rpws init 6 -a
+definekey top C-M-1 rpws1
+definekey top C-M-2 rpws2
+definekey top C-M-3 rpws3
+definekey top C-M-4 rpws4
+definekey top C-M-5 rpws5
+definekey top C-M-6 rpws6
+definekey top C-M-Left rpwsp
+definekey top C-M-Right rpwsn
+# Startup crap
+sselect 1
+set padding 0 0 0 14
+set resizeunit 121
+exec killall xfce4-notifyd
+#exec dunst
+#exec conky -c $HOME/.conkyrc-rat |dzen2 -h 20 -ta l -e -p
+#exec conky -c  $HOME/.conkyrc-console |dzen2 -ta left -fg '#ddccbb' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*'
+#exec xmobar -F '#ddccbb' -f '-*-terminus-*-r-normal-*-*-120-*-*-*-*-utf-8-*'
+#exec bash /home/dexter4/wifistatusbar2xx wlan0 |dzen2
+#exec bash /home/dexter4/wifistatusbar2xx wlan1 |dzen2 -ta right -fg '#c3c2c5' -fn '-*-terminus-*-r-normal-*-*-90-*-*-*-*-iso8859-*'
+exec xsetroot -cursor_name left_ptr
+#xcompmgr is kawaii :)
+#exec compton -c -m 0.75 -b
+#Hides the rat a few seconds is is idle.
