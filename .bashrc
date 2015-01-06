@@ -73,9 +73,13 @@ upl-imgur() {
 	| grep -Eo "http://i.imgur.com/[^<]*"
 }
 # some more ls aliases
+alias p8='ping 8.8.8.8'
+alias detoxx='detox -s iso8859_1 -r'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ippu='curl ip.appspot.com'
+alias whoi='lsof -P -i -n'
 alias ippublica='curl ifconfig.me'
 alias weather2='telnet rainmaker.wunderground.com 3000'
 function extract () {
