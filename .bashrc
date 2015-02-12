@@ -114,6 +114,8 @@ function extract () {
 function 4chandl ()
 {
 wget --no-check-certificate -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D i.4cdn.org -e robots=off -P $1 $2;
+#delete thumbnails "chapuza"
+rm $1*s*
 }
 function 2chandl () 
 { 
