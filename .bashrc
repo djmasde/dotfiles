@@ -109,6 +109,18 @@ function extract () {
          echo "'$1' is not a valid file"
      fi
 }
+function txtunixtowin ()
+#convert unix format to "windoze format" (CRLF)
+#parameters ej: txtunixtowin text1.txt text2.txt (output)
+{
+sed 's/$'"/`echo \\\r`/" $1 > $2
+}
+function txtwintounix ()
+#convert CRLF "windoze format", to unix format
+#parameters ej: txtwintounix text1.txt text2.txt (output)
+{
+tr -d '\r' < $1 > $2
+}
 #get 4chan images :problem moot? since /src/ is removed in i.4cdn.org, this version gets ok :3
 #parameters: 4chandl dir to images + 4chan url thread ex: weadedir + thread of 4chan url
 function 4chandl ()
