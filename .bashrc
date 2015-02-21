@@ -109,6 +109,11 @@ function extract () {
          echo "'$1' is not a valid file"
      fi
 }
+function nemesis ()
+#destroy a zombie process
+{
+kill -HUP $(ps -A -ostat,ppid | grep -e '[zZ]'| awk '{ print $2 }')
+}
 function txtunixtowin ()
 #convert unix format to "windoze format" (CRLF)
 #parameters ej: txtunixtowin text1.txt text2.txt (output)
