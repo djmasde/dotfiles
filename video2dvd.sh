@@ -35,8 +35,12 @@ done
 emphasise "Converting AVI to MPG"
 
 for var in "$@"
-do
-    ffmpeg -i "$var" -y -target ${format}-dvd -aspect 16:9 "$var.mpg"
+do  
+#normal dvd "sp mode"
+#    ffmpeg -i "$var" -y -target ${format}-dvd -aspect 16:9 "$var.mpg"
+#with compression "ep mode"
+    ffmpeg -i "$var" -vf scale=720:480,fifo,pad=720:480:0:0:0x000000 -y -target ntsc-dvd -acodec ac3 -sn -g 12 -bf 2 -strict 1 -ac 2 -s 720x480 -trellis 1 -mbd 2 -b 5001000 -ab 224000 -aspect 16:9 "$var.mpg"
+    if [ $? != 0 ]
     if [ $? != 0 ]
     then
         emphasise "Conversion failed"
