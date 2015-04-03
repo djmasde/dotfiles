@@ -140,6 +140,12 @@ wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/\*/src/ -P $1 $2;
 #delete *.htm if finish download
 rm $1*.htm
 }
+function mlpchandl () 
+{ 
+#downloads images from mlpchan, problem with this?
+wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/\*/src/ -P $1 $2;
+rm $1*.html
+}
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
