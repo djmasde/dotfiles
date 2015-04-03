@@ -140,9 +140,9 @@ wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/\*/src/ -P $1 $2;
 #delete *.htm if finish download
 rm $1*.htm
 }
-function mlpchandl () 
+function ponychandl () 
 { 
-#downloads images from mlpchan, problem with this?
+#downloads images from ponychan, problem with this?
 wget -e robots=off -nvcdp -t 0 -Hkrl 0 -I \*/\*/src/ -P $1 $2;
 rm $1*.html
 }
