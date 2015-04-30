@@ -57,21 +57,25 @@
   [exec] (urxvt)    {urxvt}
   [exec] (xterm)    {xterm -ls}
   [exec] (rxvt)     {rxvt}
+  [exec] (Run...)   {dmenu_run -b}
+  [exec] (pcmanfm)  {pcmanfm}
+  [exec] (qtfm)     {qtfm}
 
-  [exec] (StarOffice) {soffice}
-  [exec] (XEmacs)     {xemacs}
+  [exec] (StarOffice) {libreoffice4.2}
+  [exec] (Leafpad)    {leafpad}
   [exec] (Acroread)   {xpdf}
 
   [submenu] (Graphics)
     [exec] (The GIMP)     {gimp}
     [exec] (Image Magick) {display}
     [exec] (Feh) 	  {feh}
+    [exec] (Gpicview)     {gpicview}
   [end]
 
   [submenu] (Net)
     [exec] (Mozilla Firefox)    {firefox}
     [exec] (Qupzilla)  		{qupzilla}
-    [exec] (Dillo)		{firefox}
+    [exec] (Dillo)		{dillo}
     [exec] (Pidgin) 		{psi}
     [exec] (PSI)  		{psi}
     [submenu] (More...)
