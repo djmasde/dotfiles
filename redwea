@@ -118,7 +118,7 @@ window.handleHeight: 1
 !-- lost & found --
 window.label.appearance: parentrelative
 window.label.textColor: #b8dce2
-menu.fontHeight: 10
+menu.fontHeight: 9
 menu.fontWeight: normal
 slit.appearance: flat solid
 slit.backgroundColor: #ffffff
