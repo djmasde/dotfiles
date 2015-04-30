@@ -97,7 +97,8 @@ URxvt*internalBorder     : 2
 !	xft:LastResort:size=5
 URxvt*font: xft:Tewi:pixelsize=11
 URxvt*boldFont: xft:Tewi:pixelsize=11
-urxvt.geometry: 90x25
+!urxvt.geometry: 90x25
+URxvt*geometry: 94x30
 ! Format:
 !  ! Colour
 !  <dark>
