@@ -54,12 +54,11 @@
 # example:
 
 [begin] (Blackbox)
-  [exec] (urxvt)    {urxvt}
-  [exec] (xterm)    {xterm -ls}
-  [exec] (rxvt)     {rxvt}
+  [exec] (Urxvt)    {urxvt}
+# [exec] (Xterm)    {xterm -ls}
+# [exec] (Rxvt)     {rxvt}
   [exec] (Run...)   {dmenu_run -b}
-  [exec] (pcmanfm)  {pcmanfm}
-  [exec] (qtfm)     {qtfm}
+  [exec] (Pcmanfm)  {pcmanfm}
 
   [exec] (StarOffice) {libreoffice4.2}
   [exec] (Leafpad)    {leafpad}
@@ -85,12 +84,16 @@
     [end]
   [end]
 
-  [submenu] (X Utilities)
+  [submenu] (X and Utilities)
     [exec] (Xfontsel) {xfontsel}
     [exec] (Xman)     {xman}
     [exec] (Xcalc)    {xcalc}
     [exec] (Xload)    {xload}
+    [exec] (Top)      {urxvt -e top}
+    [exec] (Htop)     {urxvt -e htop}
+    [exec] (Alsamixer) {urxvt -e alsamixer}
     [exec] (Edit conf) {urxvt -e nano $HOME/.menu}
+    [exec] (black...)  {xset dpms force off}
   [end]
  
   [submenu] (Styles) {Choose a style...}
