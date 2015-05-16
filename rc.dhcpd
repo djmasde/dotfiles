@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# /etc/rc.d/rc.dhcpd
+#
+# Start/stop/restart the DHCP server.
+#
+# To make DHCP daemon start automatically at boot, make this
+# file executable:  chmod 755 /etc/rc.d/rc.dhcpd
+#
+ 
+case "$1" in
+   'start')
+      /usr/sbin/dhcpd ;;
+   'stop')
+      killall -s 9 dhcpd ;;
+   'restart')
+      killall -s 9 dhcpd
+      /usr/sbin/dhcpd  ;;
+   *)
+      echo "usage $0 start|stop|restart" ;;
+esac
