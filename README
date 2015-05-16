@@ -12,7 +12,7 @@ for more information.
 copy to /etc/modprobe.d, reboot or unplug the adapter, or:
 rmmod -r ath9k, plug and wait, if not, modprobe ath9k
 
--Added hostapd configuractions, and etc.
+-Added hostapd configurations, and etc.
 
 2 screenfetch-dev edited script, for says more rares Window Managers, the original says Not Found
 
