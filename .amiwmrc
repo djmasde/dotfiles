@@ -1,0 +1,46 @@
+FastQuit Off
+#SizeBorder Right
+IconPalette MagicWB
+DefaultIcon "def_tool.info"
+CustomIconsOnly Off
+ShortLabelIcons Off
+TitlebarClock Off
+TitleClockFormat "%c"
+Screen "Workbench Screen"
+Module "Keyboard" "Meta<M>:all:rotatescreens"
+Module "Background" "/home/dexter4/nano_shinonome_wallllllll.jpg"
+Screen "Desktop 2"
+Module "Background" "/home/dexter4/loli_wall_cirno_lollll.png"
+Screen "Internet"
+Module "Background" "/home/dexter4/loli_wall_loli-1486070.jpg"
+Module "Keyboard" "\
+	<F1>:all:rotatescreens\
+	<F2>:window|frame:iconify\
+	<F3>:window|frame:front\
+	<F4>:window|frame:back"
+AutoRaise yes
+Focus clicktotype
+SizeBorder Off
+ToolItem Separator
+ToolItem "Xterm" "urxvt"
+ToolItem "Firefox" "firefox"
+ToolItem "Opera" "/usr/local/opera/opera"
+ToolItem Separator
+ToolItem "Telegram" "Telegram"
+ToolItem "Psi" "psi"
+ToolItem "Sylpheed" "sylpheed"
+ToolItem "Gtkicq" "gtkicq > /dev/null"
+ToolItem "StarOffice" "/home/soffice5.2/soffice"
+ToolItem "Gftp" "gftp"
+ToolItem "Edit"	"leafpad .amiwmrc"
+ToolItem "Alsamixer" "urxvt -e alsamixer"
+ToolItem "Pcmanfm" "pcmanfm"
+ToolItem "dosemu" "dosemu"
+ToolItem "dosbox" "dosbox"
+ToolItem "Graphics"
+	{
+	ToolItem "xv" "xv"
+	ToolItem "Gqview" "gqview"
+	ToolItem "Dia" "dia"
+        ToolItem "feh" "feh"
+	}
