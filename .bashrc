@@ -128,11 +128,13 @@ tr -d '\r' < $1 > $2
 }
 #get 4chan images :problem moot? since /src/ is removed in i.4cdn.org, this version gets ok :3
 #parameters: 4chandl dir to images + 4chan url thread ex: weadedir + thread of 4chan url
+#2017/01/02 4chan changes i.4cdn.org to is.4chan.org target to two is* and get images :problem moot? :3
 function 4chandl ()
 {
-wget --no-check-certificate -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D i.4cdn.org -e robots=off -P $1 $2;
+wget --no-check-certificate -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D is.4chan.org -e robots=off -P $1 $2;
+wget --no-check-certificate -nc -nd -H -r -A jpg,jpeg,gif,png,webm -D is2.4chan.org -e robots=off -P $1 $2;
 #delete thumbnails "chapuza"
-rm $1*s*
+#rm $1*s*
 }
 function 2chandl () 
 { 
