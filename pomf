@@ -3,6 +3,7 @@
 # little modified by Dj_Dexter, don't like take scrot and upload this!
 # don't delete the .png or another
 # and ok :)
+# Fixed, to use in pomf.cat
 
 FILE=$1
 
@@ -20,7 +21,7 @@ BASE=""; TRY=0
 while [ "x$BASE" == "x" ] && [ $TRY -lt 3 ]; do
     TRY=$[$TRY + 1]
     echo "Uploading... (try $TRY)"
-    JSON="`curl -sf -F "files[]=@$FILE" http://pomf.se/upload.php`"
+    JSON="`curl -sf -F "files[]=@$FILE" http://pomf.cat/upload.php`"
     BASE="`echo "$JSON" | python -c "from __future__ import print_function;print(__import__('json').loads(__import__('sys').stdin.read())['files'][0]['url'])" 2>/dev/null`"
 done
 
@@ -29,7 +30,7 @@ if [ $TRY -eq 3 ]; then
     exit 1
 fi
 
-URL="http://a.pomf.se/$BASE"
+URL="http://a.pomf.cat/$BASE"
 
 # copy the URL to the clipboard
 if [[ `type -p xclip` ]]; then
